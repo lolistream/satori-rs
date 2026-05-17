@@ -1,10 +1,10 @@
 [package]
-name = "satori"
+name = "satori-rs"
 version = "0.1.0"
 edition = "2021"
 license = "MPL-2.0"
 description = "Pure-Rust reimplementation of Vercel Satori"
-repository = "https://github.com/local/satori-rs"
+repository = "https://github.com/lolistream/satori-rs"
 
 [dependencies]
 serde = { version = "1", features = ["derive"] }
