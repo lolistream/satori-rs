@@ -1,0 +1,27 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toEqual",
+      "lhs": {
+        "kind": "array",
+        "length": 1
+      },
+      "rhs": [
+        "zh-CN",
+        "ja-JP",
+        "zh-TW",
+        "zh-HK"
+      ],
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "language.test.tsx",
+    "describes": [
+      "detectLanguageCode"
+    ],
+    "it": "should detect simplified chinese when locale is zh-cn"
+  }
+}

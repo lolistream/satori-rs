@@ -1,0 +1,38 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "width": 100,
+        "height": 100,
+        "fontSize": 18,
+        "color": "red",
+        "textWrap": "wrap"
+      },
+      "children": "a a a a a a a a"
+    },
+    "key": null
+  },
+  "options": {
+    "width": 100,
+    "height": 100,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 100,
+  "snapshot": "text-wrap-test-tsx-text-wrap-should-wrap-normally-with-text-wrap-wrap-1-snap.png",
+  "source": {
+    "file": "text-wrap.test.tsx",
+    "describes": [
+      "text-wrap"
+    ],
+    "it": "should wrap normally with text-wrap: wrap",
+    "callIndex": 0
+  }
+}

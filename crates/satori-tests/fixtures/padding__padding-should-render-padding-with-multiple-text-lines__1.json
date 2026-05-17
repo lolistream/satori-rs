@@ -1,0 +1,37 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "background": "lightyellow",
+        "padding": 15,
+        "fontSize": 16,
+        "width": 80
+      },
+      "children": "This is a text with padding that wraps"
+    },
+    "key": null
+  },
+  "options": {
+    "width": 100,
+    "height": 100,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 100,
+  "snapshot": "padding-test-tsx-padding-should-render-padding-with-multiple-text-lines-1-snap.png",
+  "source": {
+    "file": "padding.test.tsx",
+    "describes": [
+      "Padding"
+    ],
+    "it": "should render padding with multiple text lines",
+    "callIndex": 0
+  }
+}

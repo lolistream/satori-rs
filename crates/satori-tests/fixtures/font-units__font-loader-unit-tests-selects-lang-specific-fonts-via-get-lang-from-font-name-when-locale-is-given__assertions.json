@@ -1,0 +1,12 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [],
+  "source": {
+    "file": "font-units.test.tsx",
+    "describes": [
+      "FontLoader unit tests"
+    ],
+    "it": "selects lang-specific fonts via getLangFromFontName when locale is given"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "height": "100%",
+        "width": "100%",
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "center",
+        "justifyContent": "center",
+        "backgroundColor": "#fff",
+        "fontSize": 20,
+        "fontWeight": 600
+      },
+      "children": {
+        "type": "div",
+        "props": {
+          "style": {
+            "maxWidth": "190px",
+            "backgroundColor": "#91a8d0",
+            "textDecorationLine": "underline",
+            "textDecorationStyle": "dotted",
+            "color": "white"
+          },
+          "children": "It doesn’t exist, it never has. I’m nostalgic for a place that never existed."
+        },
+        "key": null
+      }
+    },
+    "key": null
+  },
+  "options": {
+    "width": 200,
+    "height": 200,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 200,
+  "snapshot": "text-decoration-test-tsx-text-decoration-should-work-correctly-when-text-decoration-style-dotted-1-snap.png",
+  "source": {
+    "file": "text-decoration.test.tsx",
+    "describes": [
+      "Text Decoration"
+    ],
+    "it": "Should work correctly when `text-decoration-style: dotted`",
+    "callIndex": 0
+  }
+}

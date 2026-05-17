@@ -1,0 +1,28 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toEqual",
+      "lhs": {
+        "kind": "null"
+      },
+      "rhs": [],
+      "negated": false
+    },
+    {
+      "kind": "toHaveBeenCalled",
+      "lhs": {
+        "kind": "other"
+      },
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "coverage-supplemental.test.tsx",
+    "describes": [
+      "image.ts remaining branches"
+    ],
+    "it": "throws \"Failed to parse SVG image\" when fetched SVG cannot be parsed"
+  }
+}

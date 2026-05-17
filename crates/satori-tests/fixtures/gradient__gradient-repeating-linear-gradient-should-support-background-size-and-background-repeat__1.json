@@ -1,0 +1,38 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "backgroundColor": "white",
+        "backgroundImage": "repeating-linear-gradient(30deg, red, blue 30%)",
+        "backgroundSize": "50px 25px",
+        "height": "100%",
+        "width": "100%"
+      }
+    },
+    "key": null
+  },
+  "options": {
+    "width": 200,
+    "height": 100,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 100,
+  "snapshot": "gradient-test-tsx-gradient-repeating-linear-gradient-should-support-background-size-and-background-repeat-1-snap.png",
+  "source": {
+    "file": "gradient.test.tsx",
+    "describes": [
+      "Gradient",
+      "repeating-linear-gradient"
+    ],
+    "it": "should support background-size and background-repeat",
+    "callIndex": 0
+  }
+}

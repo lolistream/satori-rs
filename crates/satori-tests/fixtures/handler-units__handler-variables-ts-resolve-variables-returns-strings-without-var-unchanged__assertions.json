@@ -1,0 +1,21 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toBe",
+      "lhs": {
+        "kind": "null"
+      },
+      "rhs": "red",
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "handler-units.test.tsx",
+    "describes": [
+      "handler/variables.ts"
+    ],
+    "it": "resolveVariables returns strings without var() unchanged"
+  }
+}

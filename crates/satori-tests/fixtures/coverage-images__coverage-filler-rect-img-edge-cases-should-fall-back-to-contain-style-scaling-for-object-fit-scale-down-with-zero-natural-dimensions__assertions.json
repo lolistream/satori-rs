@@ -1,0 +1,61 @@
+{
+  "kind": "assertions",
+  "calls": [
+    {
+      "element": {
+        "type": "div",
+        "props": {
+          "style": {
+            "width": "100%",
+            "height": "100%",
+            "display": "flex"
+          },
+          "children": {
+            "type": "img",
+            "props": {
+              "src": "data:image/webp,unknownsize",
+              "width": 0,
+              "height": 0,
+              "style": {
+                "objectFit": "scale-down"
+              }
+            },
+            "key": null
+          }
+        },
+        "key": null
+      },
+      "options": {
+        "width": 100,
+        "height": 100,
+        "fonts": [
+          {
+            "name": "Roboto",
+            "weight": 400,
+            "style": "normal",
+            "assetFile": "Roboto-Regular.ttf"
+          }
+        ]
+      },
+      "error": null
+    }
+  ],
+  "assertions": [
+    {
+      "kind": "toBe",
+      "lhs": {
+        "kind": "string",
+        "value": "string"
+      },
+      "rhs": "string",
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "coverage-images.test.tsx",
+    "describes": [
+      "coverage filler: rect (img edge cases)"
+    ],
+    "it": "should fall back to contain-style scaling for object-fit: scale-down with zero natural dimensions"
+  }
+}

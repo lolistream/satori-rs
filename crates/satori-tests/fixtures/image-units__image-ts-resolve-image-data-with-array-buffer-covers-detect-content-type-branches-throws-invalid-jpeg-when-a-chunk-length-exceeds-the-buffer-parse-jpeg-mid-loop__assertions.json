@@ -1,0 +1,24 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "rejectsToThrow",
+      "lhs": {
+        "kind": "null"
+      },
+      "rhs": {
+        "__regex": "Invalid JPEG",
+        "flags": ""
+      },
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "image-units.test.tsx",
+    "describes": [
+      "image.ts resolveImageData with ArrayBuffer (covers detectContentType branches)"
+    ],
+    "it": "throws \"Invalid JPEG\" when a chunk length exceeds the buffer (parseJPEG mid-loop)"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "kind": "assertions",
+  "calls": [
+    {
+      "element": {
+        "type": "div",
+        "props": {
+          "style": {
+            "backgroundImage": "-webkit-repeating-linear-gradient(left, red, blue 50%)",
+            "height": "100%",
+            "width": "100%"
+          }
+        },
+        "key": null
+      },
+      "options": {
+        "width": 100,
+        "height": 100,
+        "fonts": [
+          {
+            "name": "Roboto",
+            "weight": 400,
+            "style": "normal",
+            "assetFile": "Roboto-Regular.ttf"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "element": {
+        "type": "div",
+        "props": {
+          "style": {
+            "backgroundImage": "repeating-linear-gradient(to right, red, blue 50%)",
+            "height": "100%",
+            "width": "100%"
+          }
+        },
+        "key": null
+      },
+      "options": {
+        "width": 100,
+        "height": 100,
+        "fonts": [
+          {
+            "name": "Roboto",
+            "weight": 400,
+            "style": "normal",
+            "assetFile": "Roboto-Regular.ttf"
+          }
+        ]
+      },
+      "error": null
+    }
+  ],
+  "assertions": [
+    {
+      "kind": "toEqual",
+      "lhs": {
+        "kind": "satoriSvg",
+        "callId": 0
+      },
+      "rhs": "__SATORI_SVG_1__",
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "gradient.test.tsx",
+    "describes": [
+      "Gradient",
+      "-webkit-gradient"
+    ],
+    "it": "should support -webkit-repeating-linear-gradient"
+  }
+}

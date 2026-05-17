@@ -1,0 +1,21 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toEqual",
+      "lhs": {
+        "kind": "null"
+      },
+      "rhs": {},
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "coverage-mocks.test.tsx",
+    "describes": [
+      "transform-origin.ts:91 (postcss-value-parser throws)"
+    ],
+    "it": "returns {} when valueParser throws"
+  }
+}

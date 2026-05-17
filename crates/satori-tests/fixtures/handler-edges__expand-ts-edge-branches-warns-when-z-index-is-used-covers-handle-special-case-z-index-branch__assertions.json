@@ -1,0 +1,56 @@
+{
+  "kind": "assertions",
+  "calls": [
+    {
+      "element": {
+        "type": "div",
+        "props": {
+          "style": {
+            "zIndex": 1,
+            "display": "flex"
+          },
+          "children": "hi"
+        },
+        "key": null
+      },
+      "options": {
+        "width": 100,
+        "height": 100,
+        "fonts": [
+          {
+            "name": "Roboto",
+            "weight": 400,
+            "style": "normal",
+            "assetFile": "Roboto-Regular.ttf"
+          }
+        ]
+      },
+      "error": null
+    }
+  ],
+  "assertions": [
+    {
+      "kind": "toBe",
+      "lhs": {
+        "kind": "string",
+        "value": "string"
+      },
+      "rhs": "string",
+      "negated": false
+    },
+    {
+      "kind": "toHaveBeenCalled",
+      "lhs": {
+        "kind": "other"
+      },
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "handler-edges.test.tsx",
+    "describes": [
+      "expand.ts edge branches"
+    ],
+    "it": "warns when zIndex is used (covers handleSpecialCase zIndex branch)"
+  }
+}

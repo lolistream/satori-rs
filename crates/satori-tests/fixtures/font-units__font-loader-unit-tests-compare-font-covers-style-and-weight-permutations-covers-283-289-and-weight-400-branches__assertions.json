@@ -1,0 +1,12 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [],
+  "source": {
+    "file": "font-units.test.tsx",
+    "describes": [
+      "FontLoader unit tests"
+    ],
+    "it": "compareFont covers style and weight permutations (covers 283-289 and weight<400 branches)"
+  }
+}

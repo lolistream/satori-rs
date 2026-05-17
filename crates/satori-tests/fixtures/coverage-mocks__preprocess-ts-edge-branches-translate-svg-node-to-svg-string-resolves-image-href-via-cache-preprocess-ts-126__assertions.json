@@ -1,0 +1,12 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [],
+  "source": {
+    "file": "coverage-mocks.test.tsx",
+    "describes": [
+      "preprocess.ts edge branches"
+    ],
+    "it": "translateSVGNodeToSVGString resolves <image> href via cache (preprocess.ts:126)"
+  }
+}

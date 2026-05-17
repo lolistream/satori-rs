@@ -1,0 +1,36 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toBeUndefined",
+      "lhs": {
+        "kind": "null"
+      },
+      "negated": false
+    },
+    {
+      "kind": "toBe",
+      "lhs": {
+        "kind": "null"
+      },
+      "rhs": 2,
+      "negated": false
+    },
+    {
+      "kind": "toBe",
+      "lhs": {
+        "kind": "null"
+      },
+      "rhs": 3,
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "coverage-supplemental.test.tsx",
+    "describes": [
+      "utils.ts remaining branches"
+    ],
+    "it": "createLRU evicts least-recently-set when over max (covers store.delete(firstKey))"
+  }
+}

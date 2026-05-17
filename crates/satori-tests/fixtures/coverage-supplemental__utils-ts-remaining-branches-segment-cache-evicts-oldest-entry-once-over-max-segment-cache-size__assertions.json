@@ -1,0 +1,22 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toBe",
+      "lhs": {
+        "kind": "boolean",
+        "value": true
+      },
+      "rhs": true,
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "coverage-supplemental.test.tsx",
+    "describes": [
+      "utils.ts remaining branches"
+    ],
+    "it": "segment cache evicts oldest entry once over MAX_SEGMENT_CACHE_SIZE"
+  }
+}

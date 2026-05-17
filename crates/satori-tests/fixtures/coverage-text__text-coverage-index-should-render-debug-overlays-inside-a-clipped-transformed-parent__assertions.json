@@ -1,0 +1,64 @@
+{
+  "kind": "assertions",
+  "calls": [
+    {
+      "element": {
+        "type": "div",
+        "props": {
+          "style": {
+            "display": "flex",
+            "width": "100%",
+            "height": "100%",
+            "clipPath": "circle(60px at 50% 50%)"
+          },
+          "children": {
+            "type": "div",
+            "props": {
+              "style": {
+                "display": "flex",
+                "fontSize": 24,
+                "color": "black",
+                "transform": "translate(5px, 5px)"
+              },
+              "children": "Debug inside clip"
+            },
+            "key": null
+          }
+        },
+        "key": null
+      },
+      "options": {
+        "width": 200,
+        "height": 80,
+        "fonts": [
+          {
+            "name": "Roboto",
+            "weight": 400,
+            "style": "normal",
+            "assetFile": "Roboto-Regular.ttf"
+          }
+        ],
+        "debug": true
+      },
+      "error": null
+    }
+  ],
+  "assertions": [
+    {
+      "kind": "toBe",
+      "lhs": {
+        "kind": "string",
+        "value": "string"
+      },
+      "rhs": "string",
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "coverage-text.test.tsx",
+    "describes": [
+      "Text coverage – index"
+    ],
+    "it": "should render debug overlays inside a clipped/transformed parent"
+  }
+}

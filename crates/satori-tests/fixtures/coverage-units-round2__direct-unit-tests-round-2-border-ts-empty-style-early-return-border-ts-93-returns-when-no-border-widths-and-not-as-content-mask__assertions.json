@@ -1,0 +1,22 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toBe",
+      "lhs": {
+        "kind": "null"
+      },
+      "rhs": "",
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "coverage-units-round2.test.tsx",
+    "describes": [
+      "Direct unit tests – round 2",
+      "border.ts: empty style early return (border.ts:93)"
+    ],
+    "it": "returns \"\" when no border widths and not as content mask"
+  }
+}

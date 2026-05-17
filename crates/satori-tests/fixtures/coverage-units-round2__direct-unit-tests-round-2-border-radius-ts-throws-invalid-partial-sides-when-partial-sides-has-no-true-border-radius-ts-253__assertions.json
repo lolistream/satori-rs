@@ -1,0 +1,25 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toThrow",
+      "lhs": {
+        "kind": "other"
+      },
+      "rhs": {
+        "__regex": "Invalid `partialSides`",
+        "flags": ""
+      },
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "coverage-units-round2.test.tsx",
+    "describes": [
+      "Direct unit tests – round 2",
+      "border-radius.ts"
+    ],
+    "it": "throws \"Invalid partialSides\" when partialSides has no true (border-radius.ts:253)"
+  }
+}

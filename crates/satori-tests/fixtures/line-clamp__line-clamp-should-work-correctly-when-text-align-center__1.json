@@ -1,0 +1,56 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "height": "100%",
+        "width": "100%",
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "center",
+        "justifyContent": "center",
+        "backgroundColor": "#fff"
+      },
+      "children": {
+        "type": "div",
+        "props": {
+          "style": {
+            "width": "100%",
+            "display": "block",
+            "fontSize": 32,
+            "textAlign": "center",
+            "lineClamp": 2,
+            "backgroundColor": "#ff6c2f",
+            "color": "white"
+          },
+          "children": "Making the Web. Superfast"
+        },
+        "key": null
+      }
+    },
+    "key": null
+  },
+  "options": {
+    "width": 200,
+    "height": 200,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ],
+    "embedFont": true
+  },
+  "width": 200,
+  "snapshot": "line-clamp-test-tsx-line-clamp-should-work-correctly-when-text-align-center-1-snap.png",
+  "source": {
+    "file": "line-clamp.test.tsx",
+    "describes": [
+      "Line Clamp"
+    ],
+    "it": "Should work correctly when `text-align: center`",
+    "callIndex": 0
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toBe",
+      "lhs": {
+        "kind": "boolean",
+        "value": true
+      },
+      "rhs": true,
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "coverage-mocks.test.tsx",
+    "describes": [
+      "preprocess.ts edge branches"
+    ],
+    "it": "preProcessNode handles a node with no props (preprocess.ts:157)"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "rejectsToThrow",
+      "lhs": {
+        "kind": "null"
+      },
+      "rhs": {
+        "__regex": "fetch.*required.*polyfill",
+        "flags": ""
+      },
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "coverage-supplemental.test.tsx",
+    "describes": [
+      "image.ts remaining branches"
+    ],
+    "it": "throws when fetch is not polyfilled"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [],
+  "source": {
+    "file": "coverage-layout.test.tsx",
+    "describes": [
+      "coverage filler: layout"
+    ],
+    "it": "should throw when a class component is rendered"
+  }
+}

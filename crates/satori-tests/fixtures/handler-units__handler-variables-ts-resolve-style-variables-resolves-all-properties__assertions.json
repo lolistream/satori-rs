@@ -1,0 +1,25 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toEqual",
+      "lhs": {
+        "kind": "null"
+      },
+      "rhs": {
+        "background": "red",
+        "width": 100,
+        "color": "black"
+      },
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "handler-units.test.tsx",
+    "describes": [
+      "handler/variables.ts"
+    ],
+    "it": "resolveStyleVariables resolves all properties"
+  }
+}

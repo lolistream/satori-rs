@@ -1,0 +1,59 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "height": "100%",
+        "width": "100%",
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "center",
+        "justifyContent": "center",
+        "backgroundColor": "#fff",
+        "fontSize": 20,
+        "fontWeight": 600
+      },
+      "children": {
+        "type": "div",
+        "props": {
+          "style": {
+            "display": "flex",
+            "maxWidth": "190px",
+            "textAlign": "right",
+            "alignItems": "center",
+            "justifyContent": "center",
+            "backgroundColor": "#ff6c2f",
+            "color": "white",
+            "letterSpacing": "1px"
+          },
+          "children": "God kisses the finite in his love and man the infinite"
+        },
+        "key": null
+      }
+    },
+    "key": null
+  },
+  "options": {
+    "width": 200,
+    "height": 200,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ],
+    "embedFont": true
+  },
+  "width": 200,
+  "snapshot": "text-align-test-tsx-text-align-should-work-correctly-when-text-align-right-1-snap.png",
+  "source": {
+    "file": "text-align.test.tsx",
+    "describes": [
+      "Text Align"
+    ],
+    "it": "Should work correctly when `text-align: right`",
+    "callIndex": 0
+  }
+}

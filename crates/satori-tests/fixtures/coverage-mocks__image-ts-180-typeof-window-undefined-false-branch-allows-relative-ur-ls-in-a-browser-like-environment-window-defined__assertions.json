@@ -1,0 +1,12 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [],
+  "source": {
+    "file": "coverage-mocks.test.tsx",
+    "describes": [
+      "image.ts:180 (typeof window === \"undefined\" false branch)"
+    ],
+    "it": "allows relative URLs in a browser-like environment (window defined)"
+  }
+}

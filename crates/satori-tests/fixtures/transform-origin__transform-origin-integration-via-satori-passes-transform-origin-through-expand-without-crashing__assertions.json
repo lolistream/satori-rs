@@ -1,0 +1,60 @@
+{
+  "kind": "assertions",
+  "calls": [
+    {
+      "element": {
+        "type": "div",
+        "props": {
+          "style": {
+            "width": "50%",
+            "height": "50%",
+            "background": "red",
+            "transform": "rotate(45deg)",
+            "transformOrigin": "top left"
+          }
+        },
+        "key": null
+      },
+      "options": {
+        "width": 100,
+        "height": 100,
+        "fonts": [
+          {
+            "name": "Roboto",
+            "weight": 400,
+            "style": "normal",
+            "assetFile": "Roboto-Regular.ttf"
+          }
+        ]
+      },
+      "error": null
+    }
+  ],
+  "assertions": [
+    {
+      "kind": "toBe",
+      "lhs": {
+        "kind": "string",
+        "value": "string"
+      },
+      "rhs": "string",
+      "negated": false
+    },
+    {
+      "kind": "toContain",
+      "lhs": {
+        "kind": "satoriSvg",
+        "callId": 0
+      },
+      "rhs": "matrix",
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "transform-origin.test.tsx",
+    "describes": [
+      "transformOrigin integration via satori"
+    ],
+    "it": "passes transformOrigin through expand without crashing"
+  }
+}

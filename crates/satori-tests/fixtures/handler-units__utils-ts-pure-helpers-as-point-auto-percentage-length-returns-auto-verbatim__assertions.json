@@ -1,0 +1,23 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toBe",
+      "lhs": {
+        "kind": "string",
+        "value": "auto"
+      },
+      "rhs": "auto",
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "handler-units.test.tsx",
+    "describes": [
+      "utils.ts pure helpers",
+      "asPointAutoPercentageLength"
+    ],
+    "it": "returns \"auto\" verbatim"
+  }
+}

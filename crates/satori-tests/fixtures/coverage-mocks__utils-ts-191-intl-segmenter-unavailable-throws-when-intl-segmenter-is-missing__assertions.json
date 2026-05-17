@@ -1,0 +1,24 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toThrow",
+      "lhs": {
+        "kind": "other"
+      },
+      "rhs": {
+        "__regex": "Intl\\.Segmenter does not exist",
+        "flags": ""
+      },
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "coverage-mocks.test.tsx",
+    "describes": [
+      "utils.ts:191 (Intl.Segmenter unavailable)"
+    ],
+    "it": "throws when Intl.Segmenter is missing"
+  }
+}

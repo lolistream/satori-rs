@@ -1,0 +1,38 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "height": "100%",
+        "width": "100%",
+        "backgroundColor": "blue",
+        "backgroundImage": "linear-gradient(-15deg, green 20px, transparent 10px), linear-gradient(to top, red 10px, transparent 10px), linear-gradient(to left, red 10px, transparent 10px), linear-gradient(470deg, orange 10px, transparent 10px), linear-gradient(-470deg, black 30px, transparent 10px)",
+        "backgroundSize": "100px 50px",
+        "backgroundPosition": "25px 25px"
+      }
+    },
+    "key": null
+  },
+  "options": {
+    "width": 200,
+    "height": 300,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 100,
+  "snapshot": "gradient-test-tsx-gradient-should-calculate-the-gradient-angle-and-length-correctly-with-offset-1-snap.png",
+  "source": {
+    "file": "gradient.test.tsx",
+    "describes": [
+      "Gradient"
+    ],
+    "it": "should calculate the gradient angle and length correctly with offset",
+    "callIndex": 0
+  }
+}

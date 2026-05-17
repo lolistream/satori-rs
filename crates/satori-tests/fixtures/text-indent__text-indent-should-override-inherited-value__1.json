@@ -1,0 +1,57 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "height": "100%",
+        "width": "100%",
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "center",
+        "justifyContent": "center",
+        "backgroundColor": "#fff",
+        "fontSize": 20,
+        "fontWeight": 600,
+        "textIndent": "30px"
+      },
+      "children": {
+        "type": "div",
+        "props": {
+          "style": {
+            "display": "flex",
+            "maxWidth": "190px",
+            "textIndent": "10px",
+            "backgroundColor": "#ff6c2f",
+            "color": "white"
+          },
+          "children": "This text overrides the inherited text-indent with a smaller value"
+        },
+        "key": null
+      }
+    },
+    "key": null
+  },
+  "options": {
+    "width": 200,
+    "height": 200,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ],
+    "embedFont": true
+  },
+  "width": 200,
+  "snapshot": "text-indent-test-tsx-text-indent-should-override-inherited-value-1-snap.png",
+  "source": {
+    "file": "text-indent.test.tsx",
+    "describes": [
+      "Text Indent"
+    ],
+    "it": "Should override inherited value",
+    "callIndex": 0
+  }
+}

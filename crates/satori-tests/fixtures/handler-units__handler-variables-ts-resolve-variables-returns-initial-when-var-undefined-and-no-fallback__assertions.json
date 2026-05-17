@@ -1,0 +1,21 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toBe",
+      "lhs": {
+        "kind": "null"
+      },
+      "rhs": "initial",
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "handler-units.test.tsx",
+    "describes": [
+      "handler/variables.ts"
+    ],
+    "it": "resolveVariables returns \"initial\" when var undefined and no fallback"
+  }
+}

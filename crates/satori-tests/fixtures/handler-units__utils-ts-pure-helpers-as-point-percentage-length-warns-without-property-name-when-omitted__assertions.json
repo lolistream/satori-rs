@@ -1,0 +1,21 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toHaveBeenCalled",
+      "lhs": {
+        "kind": "other"
+      },
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "handler-units.test.tsx",
+    "describes": [
+      "utils.ts pure helpers",
+      "asPointPercentageLength"
+    ],
+    "it": "warns without property name when omitted"
+  }
+}

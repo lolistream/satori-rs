@@ -1,0 +1,60 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "display": "flex",
+        "flexDirection": "column",
+        "width": 100,
+        "height": 100,
+        "background": "lightgray"
+      },
+      "children": {
+        "type": "div",
+        "props": {
+          "style": {
+            "display": "contents",
+            "padding": 20,
+            "margin": 20,
+            "border": "10px solid red"
+          },
+          "children": {
+            "type": "div",
+            "props": {
+              "style": {
+                "width": 50,
+                "height": 30,
+                "background": "purple"
+              }
+            },
+            "key": null
+          }
+        },
+        "key": null
+      }
+    },
+    "key": null
+  },
+  "options": {
+    "width": 100,
+    "height": 100,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 100,
+  "snapshot": "display-contents-test-tsx-display-contents-should-ignore-padding-and-margin-on-display-contents-elements-1-snap.png",
+  "source": {
+    "file": "display-contents.test.tsx",
+    "describes": [
+      "Display Contents"
+    ],
+    "it": "should ignore padding and margin on display: contents elements",
+    "callIndex": 0
+  }
+}

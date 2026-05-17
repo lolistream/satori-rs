@@ -1,0 +1,29 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toBe",
+      "lhs": {
+        "kind": "string",
+        "value": "undefined"
+      },
+      "rhs": "function",
+      "negated": false
+    },
+    {
+      "kind": "toBe",
+      "lhs": {
+        "kind": "null"
+      },
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "tailwind.test.tsx",
+    "describes": [
+      "tailwind handler unit"
+    ],
+    "it": "createTw without config"
+  }
+}

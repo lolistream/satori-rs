@@ -1,0 +1,35 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "fontSize": 0
+      },
+      "children": "hi"
+    },
+    "key": null
+  },
+  "options": {
+    "width": 100,
+    "height": 100,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 100,
+  "snapshot": "font-test-tsx-font-font-size-should-allow-font-size-to-be-0-1-snap.png",
+  "source": {
+    "file": "font.test.tsx",
+    "describes": [
+      "Font",
+      "font-size"
+    ],
+    "it": "should allow font-size to be 0",
+    "callIndex": 0
+  }
+}

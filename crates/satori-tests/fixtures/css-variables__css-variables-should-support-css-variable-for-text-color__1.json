@@ -1,0 +1,50 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "--theme-color": "red",
+        "width": "100%",
+        "height": "100%",
+        "display": "flex",
+        "alignItems": "center",
+        "justifyContent": "center",
+        "backgroundColor": "white"
+      },
+      "children": {
+        "type": "div",
+        "props": {
+          "style": {
+            "color": "var(--theme-color)",
+            "fontSize": "32px"
+          },
+          "children": "Hello"
+        },
+        "key": null
+      }
+    },
+    "key": null
+  },
+  "options": {
+    "width": 200,
+    "height": 100,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 200,
+  "snapshot": "css-variables-test-tsx-css-variables-should-support-css-variable-for-text-color-1-snap.png",
+  "source": {
+    "file": "css-variables.test.tsx",
+    "describes": [
+      "CSS Variables"
+    ],
+    "it": "should support CSS variable for text color",
+    "callIndex": 0
+  }
+}

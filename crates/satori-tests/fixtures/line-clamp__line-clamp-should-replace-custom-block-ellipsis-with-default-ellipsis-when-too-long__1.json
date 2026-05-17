@@ -1,0 +1,52 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "height": "100%",
+        "width": "100%",
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "center",
+        "justifyContent": "center",
+        "backgroundColor": "#fff"
+      },
+      "children": {
+        "type": "div",
+        "props": {
+          "style": {
+            "width": "100%",
+            "display": "block",
+            "lineClamp": "2 \"… (loooooooooooooooooooooooooog text)\""
+          },
+          "children": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        "key": null
+      }
+    },
+    "key": null
+  },
+  "options": {
+    "width": 200,
+    "height": 200,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ],
+    "embedFont": true
+  },
+  "width": 200,
+  "snapshot": "line-clamp-test-tsx-line-clamp-should-replace-custom-block-ellipsis-with-default-ellipsis-when-too-long-1-snap.png",
+  "source": {
+    "file": "line-clamp.test.tsx",
+    "describes": [
+      "Line Clamp"
+    ],
+    "it": "Should replace custom block ellipsis with default ellipsis when too long",
+    "callIndex": 0
+  }
+}

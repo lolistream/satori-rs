@@ -1,0 +1,22 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toBe",
+      "lhs": {
+        "kind": "null"
+      },
+      "rhs": "",
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "coverage-units-round2.test.tsx",
+    "describes": [
+      "Direct unit tests – round 2",
+      "clip-path.ts"
+    ],
+    "it": "returns empty string when style.clipPath === \"none\" (clip-path.ts:26)"
+  }
+}

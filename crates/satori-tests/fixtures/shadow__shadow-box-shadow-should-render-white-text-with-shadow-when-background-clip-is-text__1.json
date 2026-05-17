@@ -1,0 +1,41 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "width": 100,
+        "height": 100,
+        "fontSize": 40,
+        "background": "linear-gradient(90deg, #ff00bc, #6400ff)",
+        "backgroundClip": "text",
+        "color": "#ffffffff",
+        "textShadow": "0px 0px 5px #000"
+      },
+      "children": "Hello"
+    },
+    "key": null
+  },
+  "options": {
+    "width": 100,
+    "height": 100,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 100,
+  "snapshot": "shadow-test-tsx-shadow-box-shadow-should-render-white-text-with-shadow-when-background-clip-is-text-1-snap.png",
+  "source": {
+    "file": "shadow.test.tsx",
+    "describes": [
+      "Shadow",
+      "box-shadow"
+    ],
+    "it": "should render white text with shadow when backgroundClip is text",
+    "callIndex": 0
+  }
+}

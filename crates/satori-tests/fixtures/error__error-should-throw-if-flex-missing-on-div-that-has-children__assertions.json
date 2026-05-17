@@ -1,0 +1,55 @@
+{
+  "kind": "assertions",
+  "calls": [
+    {
+      "element": {
+        "type": "div",
+        "props": {
+          "children": [
+            "Test ",
+            {
+              "type": "span",
+              "props": {
+                "children": "satori"
+              },
+              "key": null
+            },
+            " with space"
+          ]
+        },
+        "key": null
+      },
+      "options": {
+        "width": 10,
+        "height": 10,
+        "fonts": [
+          {
+            "name": "Roboto",
+            "weight": 400,
+            "style": "normal",
+            "assetFile": "Roboto-Regular.ttf"
+          }
+        ]
+      },
+      "error": null
+    }
+  ],
+  "assertions": [
+    {
+      "kind": "rejectsToThrow",
+      "lhs": {
+        "kind": "satoriPromise",
+        "callId": 0
+      },
+      "rhs": "Expected <div> to have explicit \"display: flex\", \"display: contents\", or \"display: none\" if it has more than one child node.",
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "error.test.tsx",
+    "describes": [
+      "Error"
+    ],
+    "it": "should throw if flex missing on div that has children"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [],
+  "source": {
+    "file": "coverage-units-round2.test.tsx",
+    "describes": [
+      "Direct unit tests – round 2",
+      "gradient/utils.ts: normalizeStops defensive branches"
+    ],
+    "it": "returns a single transparent stop when given no color stops"
+  }
+}

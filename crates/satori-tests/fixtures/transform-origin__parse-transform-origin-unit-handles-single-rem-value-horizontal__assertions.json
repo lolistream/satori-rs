@@ -1,0 +1,23 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toEqual",
+      "lhs": {
+        "kind": "null"
+      },
+      "rhs": {
+        "xAbsolute": 32
+      },
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "transform-origin.test.tsx",
+    "describes": [
+      "parseTransformOrigin (unit)"
+    ],
+    "it": "handles single rem value (horizontal)"
+  }
+}

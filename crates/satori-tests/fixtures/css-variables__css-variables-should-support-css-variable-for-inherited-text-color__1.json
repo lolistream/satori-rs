@@ -1,0 +1,65 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "--theme-color": "blue",
+        "color": "var(--theme-color)",
+        "width": "100%",
+        "height": "100%",
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "center",
+        "justifyContent": "center",
+        "backgroundColor": "white"
+      },
+      "children": [
+        {
+          "type": "div",
+          "props": {
+            "style": {
+              "fontSize": "24px"
+            },
+            "children": "Parent"
+          },
+          "key": null
+        },
+        {
+          "type": "div",
+          "props": {
+            "style": {
+              "--theme-color": "green",
+              "color": "var(--theme-color)",
+              "fontSize": "24px"
+            },
+            "children": "Child"
+          },
+          "key": null
+        }
+      ]
+    },
+    "key": null
+  },
+  "options": {
+    "width": 200,
+    "height": 100,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 200,
+  "snapshot": "css-variables-test-tsx-css-variables-should-support-css-variable-for-inherited-text-color-1-snap.png",
+  "source": {
+    "file": "css-variables.test.tsx",
+    "describes": [
+      "CSS Variables"
+    ],
+    "it": "should support CSS variable for inherited text color",
+    "callIndex": 0
+  }
+}

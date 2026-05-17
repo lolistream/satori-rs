@@ -1,0 +1,58 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "display": "flex",
+        "backgroundColor": "pink",
+        "color": "red",
+        "height": "100%",
+        "width": "100%"
+      },
+      "children": {
+        "type": "div",
+        "props": {
+          "style": {
+            "display": "flex",
+            "color": "currentcolor"
+          },
+          "children": [
+            "red",
+            {
+              "type": "div",
+              "props": {
+                "children": "red"
+              },
+              "key": null
+            }
+          ]
+        },
+        "key": null
+      }
+    },
+    "key": null
+  },
+  "options": {
+    "width": 100,
+    "height": 100,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 100,
+  "snapshot": "color-models-test-tsx-color-models-background-color-and-color-should-support-currentcolor-when-inherit-1-snap.png",
+  "source": {
+    "file": "color-models.test.tsx",
+    "describes": [
+      "Color Models",
+      "backgroundColor and color"
+    ],
+    "it": "should support currentcolor when inherit",
+    "callIndex": 0
+  }
+}

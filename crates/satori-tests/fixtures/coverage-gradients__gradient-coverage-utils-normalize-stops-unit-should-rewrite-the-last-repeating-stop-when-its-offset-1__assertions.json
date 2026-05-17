@@ -1,0 +1,12 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [],
+  "source": {
+    "file": "coverage-gradients.test.tsx",
+    "describes": [
+      "Gradient coverage – utils.normalizeStops"
+    ],
+    "it": "unit: should rewrite the last repeating stop when its offset != 1"
+  }
+}

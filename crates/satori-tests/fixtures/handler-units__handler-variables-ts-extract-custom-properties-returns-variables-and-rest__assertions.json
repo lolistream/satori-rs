@@ -1,0 +1,12 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [],
+  "source": {
+    "file": "handler-units.test.tsx",
+    "describes": [
+      "handler/variables.ts"
+    ],
+    "it": "extractCustomProperties returns variables and rest"
+  }
+}

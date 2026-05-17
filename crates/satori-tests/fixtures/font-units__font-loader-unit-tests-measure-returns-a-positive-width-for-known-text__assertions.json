@@ -1,0 +1,12 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [],
+  "source": {
+    "file": "font-units.test.tsx",
+    "describes": [
+      "FontLoader unit tests"
+    ],
+    "it": "measure returns a positive width for known text"
+  }
+}

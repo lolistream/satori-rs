@@ -1,0 +1,23 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toBe",
+      "lhs": {
+        "kind": "string",
+        "value": "undefined"
+      },
+      "rhs": "string",
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "coverage-units-round2.test.tsx",
+    "describes": [
+      "Direct unit tests – round 2",
+      "text-decoration.ts (buildSkipInkSegments via buildDecoration)"
+    ],
+    "it": "falls back to full [start, end] when all boxes are filtered (text-decoration.ts:38)"
+  }
+}

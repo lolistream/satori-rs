@@ -1,0 +1,38 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "width": 50,
+        "height": 50,
+        "margin": "25px 25px",
+        "borderRadius": "0%",
+        "boxShadow": "0px 0px 0px 10px black"
+      }
+    },
+    "key": null
+  },
+  "options": {
+    "width": 100,
+    "height": 100,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 100,
+  "snapshot": "shadow-test-tsx-shadow-box-shadow-should-work-correct-with-zero-border-radius-1-snap.png",
+  "source": {
+    "file": "shadow.test.tsx",
+    "describes": [
+      "Shadow",
+      "box-shadow"
+    ],
+    "it": "should work correct with zero border radius",
+    "callIndex": 0
+  }
+}

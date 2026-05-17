@@ -1,0 +1,42 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "height": "100%",
+        "width": "100%",
+        "display": "flex",
+        "alignItems": "center",
+        "justifyContent": "center",
+        "backgroundColor": "#fff",
+        "fontSize": 40,
+        "color": "#000",
+        "textDecorationLine": "underline"
+      },
+      "children": "abgpqapa"
+    },
+    "key": null
+  },
+  "options": {
+    "width": 260,
+    "height": 120,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 260,
+  "snapshot": "text-decoration-test-tsx-text-decoration-should-skip-ink-by-default-when-text-decoration-line-underline-1-snap.png",
+  "source": {
+    "file": "text-decoration.test.tsx",
+    "describes": [
+      "Text Decoration"
+    ],
+    "it": "Should skip ink by default when `text-decoration-line: underline`",
+    "callIndex": 0
+  }
+}

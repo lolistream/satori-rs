@@ -1,0 +1,37 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "border": "1px solid",
+        "width": "100%",
+        "height": "100%",
+        "display": "flex",
+        "backgroundImage": "url(data:image/gif;base64,R0lGODlhSABIANUAAAAAAGZFAHBNBXBREHlWCnlcIINeDoNoMIxnE4x0QJZvGJZ/UJ94HZ+LYKmAIrOJJ7OigLyRK7yuj8aZMMa5n8+iNc/Fr9mqOtnRv+KzP+Lcz+y7Q+zo3/XESPXz7//MTf///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAUKAAAALAAAAABIAEgAAAb/QIBwSCwaj4CPcslkIp/QqJTYrFqd06yWeu16t+CndzwOm5Pk9Pc8VbvLbPF7fo0f6XirfZjv6+N+gU1sgoVLZoaJH2CKiluNiVpqDgEBDn6UlmptaZmVl3iemmlRahuVqAEbdKepqptyZAyuAQx0s662pEhqHbSVHW++v8G7RmoTvwETb8m/zMZcabi0umrUuW7HagbKBm/dv9+wfG7KlW/nAW/Saerp5+zlau/m8dpCc/X09/j6/e4A7vqnDF5BeXPC0RrHzdscNG+wpbI2TRlFSEqc0YKGTBlHjEqG0SrWSxlJkEok1rpVDWWTVqlWzYGJSqbLJaJA0cl5s0om/52hPvUcSrSo0aNIkyodmuHCzQ4XbCbqoJCAggcVpObZUOGBAgKoEJz8UvGcAQQOHkS4wLbthrZsIzxwgEDhr4t1IHpRx7cv34FjRPodPBiwF8EcMEBYcIAw3wILIGDgkMoYmVQHPIDYDEIDBgkQICQYTfoA6dOhJWDQwBmEh8aoyLS7AhZVg9a4c+vevblBKgKy53WRmJm3cd6vs8ERbqUCrQEYjkvnjGEArQrLmVup7WoBh+m8OSz4BTy79iYaaSWgoBm8awoJzn38s82L3V8JIFhgrVuDBdF8MdRFLFdk4NiBrmRgXhFkpIfgYPPRx8sYKj14Dl5VcOJFhRYqt2WGhl080OE5DwSXRRoVCDBiKgJgZ+KJZHSgwIoBKDBWXoykcQECFiLgVDQ5ppEBAyr6JQADCpJzxhwXPIAAd6gQgMADP+Kzh1J7MHhUlvUNxeWELn1ZCkZiwmhImWH4geaVQO4RBAA7)"
+      }
+    },
+    "key": null
+  },
+  "options": {
+    "width": 100,
+    "height": 100,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 100,
+  "snapshot": "image-test-tsx-background-image-url-should-resolve-data-uris-with-size-for-supported-image-formats-5-snap.png",
+  "source": {
+    "file": "image.test.tsx",
+    "describes": [
+      "background-image: url()"
+    ],
+    "it": "should resolve data uris with size for supported image formats",
+    "callIndex": 4
+  }
+}

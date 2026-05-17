@@ -1,0 +1,38 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "width": "100%",
+        "height": "100%",
+        "fontSize": 18,
+        "color": "black",
+        "wordBreak": "break-word"
+      },
+      "children": "@A #quick ?brown :fox !jumps -over ~the %lazy ^dog."
+    },
+    "key": null
+  },
+  "options": {
+    "width": 100,
+    "height": 100,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 100,
+  "snapshot": "typesetting-test-tsx-typesetting-should-wrap-normally-for-special-characters-1-snap.png",
+  "source": {
+    "file": "typesetting.test.tsx",
+    "describes": [
+      "typesetting"
+    ],
+    "it": "should wrap normally for special characters",
+    "callIndex": 0
+  }
+}

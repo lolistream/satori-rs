@@ -1,0 +1,20 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toBeUndefined",
+      "lhs": {
+        "kind": "null"
+      },
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "handler-units.test.tsx",
+    "describes": [
+      "language.ts normalizeLocale"
+    ],
+    "it": "returns undefined when locale is not provided"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "kind": "assertions",
+  "calls": [
+    {
+      "element": {
+        "type": "div",
+        "props": {
+          "style": {
+            "width": "100%",
+            "height": 50,
+            "display": "flex"
+          },
+          "children": [
+            {
+              "type": "div",
+              "props": {
+                "children": "Hello"
+              },
+              "key": null
+            },
+            {
+              "type": "div",
+              "props": {
+                "children": "World"
+              },
+              "key": null
+            }
+          ]
+        },
+        "key": null
+      },
+      "options": {
+        "width": 100,
+        "height": 100,
+        "fonts": [
+          {
+            "name": "Roboto",
+            "weight": 400,
+            "style": "normal",
+            "assetFile": "Roboto-Regular.ttf"
+          }
+        ],
+        "onNodeDetected": {
+          "__callable": true
+        }
+      },
+      "error": null
+    }
+  ],
+  "assertions": [
+    {
+      "kind": "toMatchInlineSnapshot",
+      "lhs": {
+        "kind": "array",
+        "length": 0
+      },
+      "rhs": "\n      [\n        {\n          \"height\": 50,\n          \"key\": null,\n          \"left\": 0,\n          \"props\": {\n            \"style\": {\n              \"display\": \"flex\",\n              \"height\": 50,\n              \"width\": \"100%\",\n            },\n          },\n          \"textContent\": undefined,\n          \"top\": 0,\n          \"type\": \"div\",\n          \"width\": 100,\n        },\n        {\n          \"height\": 50,\n          \"key\": null,\n          \"left\": 0,\n          \"props\": {},\n          \"textContent\": \"Hello\",\n          \"top\": 0,\n          \"type\": \"div\",\n          \"width\": 37,\n        },\n        {\n          \"height\": 50,\n          \"key\": null,\n          \"left\": 37,\n          \"props\": {},\n          \"textContent\": \"World\",\n          \"top\": 0,\n          \"type\": \"div\",\n          \"width\": 42,\n        },\n      ]\n    ",
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "event.test.tsx",
+    "describes": [
+      "Event"
+    ],
+    "it": "should trigger the onNodeDetected callback"
+  }
+}

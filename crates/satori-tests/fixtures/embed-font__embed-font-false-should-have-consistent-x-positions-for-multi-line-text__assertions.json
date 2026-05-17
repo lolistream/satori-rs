@@ -1,0 +1,61 @@
+{
+  "kind": "assertions",
+  "calls": [
+    {
+      "element": {
+        "type": "div",
+        "props": {
+          "style": {
+            "display": "flex",
+            "fontFamily": "Roboto",
+            "fontSize": 16,
+            "width": 200
+          },
+          "children": "Hello world this is a test of text wrapping behavior"
+        },
+        "key": null
+      },
+      "options": {
+        "width": 200,
+        "height": 100,
+        "fonts": [
+          {
+            "name": "Roboto",
+            "weight": 400,
+            "style": "normal",
+            "assetFile": "Roboto-Regular.ttf"
+          }
+        ],
+        "embedFont": false
+      },
+      "error": null
+    }
+  ],
+  "assertions": [
+    {
+      "kind": "toBeGreaterThan",
+      "lhs": {
+        "kind": "number",
+        "value": 0
+      },
+      "rhs": 1,
+      "negated": false
+    },
+    {
+      "kind": "toBeLessThan",
+      "lhs": {
+        "kind": "number",
+        "value": 0
+      },
+      "rhs": 0.01,
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "embed-font.test.tsx",
+    "describes": [
+      "embedFont: false"
+    ],
+    "it": "should have consistent x positions for multi-line text"
+  }
+}

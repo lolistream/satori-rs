@@ -1,0 +1,36 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "--fallback-color": "pink",
+        "backgroundColor": "var(--undefined, var(--fallback-color))",
+        "width": "100%",
+        "height": "100%"
+      }
+    },
+    "key": null
+  },
+  "options": {
+    "width": 100,
+    "height": 100,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 100,
+  "snapshot": "css-variables-test-tsx-css-variables-should-handle-undefined-variables-with-fallback-chain-1-snap.png",
+  "source": {
+    "file": "css-variables.test.tsx",
+    "describes": [
+      "CSS Variables"
+    ],
+    "it": "should handle undefined variables with fallback chain",
+    "callIndex": 0
+  }
+}

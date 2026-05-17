@@ -1,0 +1,35 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "height": "100%",
+        "width": "100%",
+        "background": "linear-gradient(90deg, #fff 0%, #50ff5050 50%), #fff"
+      }
+    },
+    "key": null
+  },
+  "options": {
+    "width": 300,
+    "height": 100,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 100,
+  "snapshot": "gradient-test-tsx-gradient-should-support-gradient-with-color-background-1-snap.png",
+  "source": {
+    "file": "gradient.test.tsx",
+    "describes": [
+      "Gradient"
+    ],
+    "it": "should support gradient with color background",
+    "callIndex": 0
+  }
+}

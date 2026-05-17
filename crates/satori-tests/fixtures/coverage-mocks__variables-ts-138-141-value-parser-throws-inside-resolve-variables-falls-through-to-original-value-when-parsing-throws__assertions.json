@@ -1,0 +1,28 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toBe",
+      "lhs": {
+        "kind": "null"
+      },
+      "rhs": "var(--foo)",
+      "negated": false
+    },
+    {
+      "kind": "toHaveBeenCalled",
+      "lhs": {
+        "kind": "other"
+      },
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "coverage-mocks.test.tsx",
+    "describes": [
+      "variables.ts:138-141 (valueParser throws inside resolveVariables)"
+    ],
+    "it": "falls through to original value when parsing throws"
+  }
+}

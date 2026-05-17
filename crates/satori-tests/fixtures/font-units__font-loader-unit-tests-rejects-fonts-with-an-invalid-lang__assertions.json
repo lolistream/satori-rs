@@ -1,0 +1,24 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toThrow",
+      "lhs": {
+        "kind": "other"
+      },
+      "rhs": {
+        "__regex": "Invalid value for props `lang`",
+        "flags": ""
+      },
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "font-units.test.tsx",
+    "describes": [
+      "FontLoader unit tests"
+    ],
+    "it": "rejects fonts with an invalid `lang`"
+  }
+}

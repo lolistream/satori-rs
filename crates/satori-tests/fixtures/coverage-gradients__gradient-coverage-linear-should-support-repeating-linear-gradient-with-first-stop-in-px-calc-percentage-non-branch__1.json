@@ -1,0 +1,35 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "background": "repeating-linear-gradient(45deg, red 5px, blue 20px)",
+        "height": "100%",
+        "width": "100%"
+      }
+    },
+    "key": null
+  },
+  "options": {
+    "width": 100,
+    "height": 100,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 100,
+  "snapshot": "coverage-gradients-test-tsx-gradient-coverage-linear-should-support-repeating-linear-gradient-with-first-stop-in-px-calc-percentage-non-branch-1-snap.png",
+  "source": {
+    "file": "coverage-gradients.test.tsx",
+    "describes": [
+      "Gradient coverage – linear"
+    ],
+    "it": "should support repeating-linear-gradient with first stop in px (calcPercentage non-% branch)",
+    "callIndex": 0
+  }
+}

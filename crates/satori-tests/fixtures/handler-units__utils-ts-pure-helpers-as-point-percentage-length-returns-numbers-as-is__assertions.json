@@ -1,0 +1,23 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toBe",
+      "lhs": {
+        "kind": "number",
+        "value": 42
+      },
+      "rhs": 42,
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "handler-units.test.tsx",
+    "describes": [
+      "utils.ts pure helpers",
+      "asPointPercentageLength"
+    ],
+    "it": "returns numbers as-is"
+  }
+}

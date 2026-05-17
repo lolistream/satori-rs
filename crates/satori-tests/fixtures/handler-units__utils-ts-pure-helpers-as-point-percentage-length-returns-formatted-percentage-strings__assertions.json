@@ -1,0 +1,23 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toBe",
+      "lhs": {
+        "kind": "string",
+        "value": "25%"
+      },
+      "rhs": "25%",
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "handler-units.test.tsx",
+    "describes": [
+      "utils.ts pure helpers",
+      "asPointPercentageLength"
+    ],
+    "it": "returns formatted percentage strings"
+  }
+}

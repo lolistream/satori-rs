@@ -1,0 +1,12 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [],
+  "source": {
+    "file": "coverage-supplemental.test.tsx",
+    "describes": [
+      "font.ts remaining branches (resolveFont undefined word)"
+    ],
+    "it": "engine.has returns false for a character no font can render"
+  }
+}

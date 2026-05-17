@@ -1,0 +1,43 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "height": "100%",
+        "width": "100%",
+        "display": "flex",
+        "textAlign": "center",
+        "alignItems": "center",
+        "justifyContent": "center",
+        "flexDirection": "column",
+        "flexWrap": "nowrap",
+        "backgroundColor": "white",
+        "backgroundImage": "linear-gradient(#222222 1px , transparent 1px ),linear-gradient(to right, #222222 1px , transparent 1px )",
+        "backgroundSize": "100px 100px"
+      }
+    },
+    "key": null
+  },
+  "options": {
+    "width": 300,
+    "height": 300,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 300,
+  "snapshot": "gradient-test-tsx-gradient-should-be-able-to-render-grid-backgrounds-1-snap.png",
+  "source": {
+    "file": "gradient.test.tsx",
+    "describes": [
+      "Gradient"
+    ],
+    "it": "should be able to render grid backgrounds",
+    "callIndex": 0
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toEqual",
+      "lhs": {
+        "kind": "null"
+      },
+      "rhs": {},
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "coverage-supplemental.test.tsx",
+    "describes": [
+      "transform-origin.ts: parseUnit default branch"
+    ],
+    "it": "returns empty for valid CSS dimension with unsupported unit (pt)"
+  }
+}

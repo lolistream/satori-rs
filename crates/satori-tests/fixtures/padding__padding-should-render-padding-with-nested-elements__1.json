@@ -1,0 +1,61 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "display": "flex",
+        "width": 80,
+        "height": 80,
+        "background": "lavender",
+        "padding": 10
+      },
+      "children": {
+        "type": "div",
+        "props": {
+          "style": {
+            "display": "flex",
+            "width": "100%",
+            "height": "100%",
+            "background": "violet",
+            "padding": 10
+          },
+          "children": {
+            "type": "div",
+            "props": {
+              "style": {
+                "width": "100%",
+                "height": "100%",
+                "background": "white"
+              }
+            },
+            "key": null
+          }
+        },
+        "key": null
+      }
+    },
+    "key": null
+  },
+  "options": {
+    "width": 100,
+    "height": 100,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 100,
+  "snapshot": "padding-test-tsx-padding-should-render-padding-with-nested-elements-1-snap.png",
+  "source": {
+    "file": "padding.test.tsx",
+    "describes": [
+      "Padding"
+    ],
+    "it": "should render padding with nested elements",
+    "callIndex": 0
+  }
+}

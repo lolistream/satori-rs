@@ -1,0 +1,22 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toBe",
+      "lhs": {
+        "kind": "null"
+      },
+      "rhs": "",
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "coverage-units-round2.test.tsx",
+    "describes": [
+      "Direct unit tests – round 2",
+      "shadow.ts"
+    ],
+    "it": "returns \"\" early when shadowRadius is missing (shadow.ts:42)"
+  }
+}

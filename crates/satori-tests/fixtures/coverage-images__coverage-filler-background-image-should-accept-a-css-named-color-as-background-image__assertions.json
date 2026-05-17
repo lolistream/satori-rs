@@ -1,0 +1,50 @@
+{
+  "kind": "assertions",
+  "calls": [
+    {
+      "element": {
+        "type": "div",
+        "props": {
+          "style": {
+            "width": "100%",
+            "height": "100%",
+            "display": "flex",
+            "backgroundImage": "rgba(0, 128, 255, 0.5)"
+          }
+        },
+        "key": null
+      },
+      "options": {
+        "width": 100,
+        "height": 100,
+        "fonts": [
+          {
+            "name": "Roboto",
+            "weight": 400,
+            "style": "normal",
+            "assetFile": "Roboto-Regular.ttf"
+          }
+        ]
+      },
+      "error": null
+    }
+  ],
+  "assertions": [
+    {
+      "kind": "toContain",
+      "lhs": {
+        "kind": "satoriSvg",
+        "callId": 0
+      },
+      "rhs": "rgba(",
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "coverage-images.test.tsx",
+    "describes": [
+      "coverage filler: background-image"
+    ],
+    "it": "should accept a CSS named color as backgroundImage"
+  }
+}

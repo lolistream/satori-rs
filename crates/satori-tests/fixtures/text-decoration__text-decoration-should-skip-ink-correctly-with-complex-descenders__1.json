@@ -1,0 +1,42 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "height": "100%",
+        "width": "100%",
+        "display": "flex",
+        "alignItems": "center",
+        "justifyContent": "center",
+        "backgroundColor": "#fff",
+        "fontSize": 40,
+        "color": "#000",
+        "textDecorationLine": "underline"
+      },
+      "children": "agayaqapajaya;a,a|a"
+    },
+    "key": null
+  },
+  "options": {
+    "width": 360,
+    "height": 160,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 360,
+  "snapshot": "text-decoration-test-tsx-text-decoration-should-skip-ink-correctly-with-complex-descenders-1-snap.png",
+  "source": {
+    "file": "text-decoration.test.tsx",
+    "describes": [
+      "Text Decoration"
+    ],
+    "it": "Should skip ink correctly with complex descenders",
+    "callIndex": 0
+  }
+}

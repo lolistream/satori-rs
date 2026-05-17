@@ -1,0 +1,55 @@
+{
+  "kind": "assertions",
+  "calls": [
+    {
+      "element": {
+        "type": "span",
+        "props": {
+          "children": [
+            "Test ",
+            {
+              "type": "span",
+              "props": {
+                "children": "satori"
+              },
+              "key": null
+            },
+            " with space"
+          ]
+        },
+        "key": null
+      },
+      "options": {
+        "width": 10,
+        "height": 10,
+        "fonts": [
+          {
+            "name": "Roboto",
+            "weight": 400,
+            "style": "normal",
+            "assetFile": "Roboto-Regular.ttf"
+          }
+        ]
+      },
+      "error": null
+    }
+  ],
+  "assertions": [
+    {
+      "kind": "toBe",
+      "lhs": {
+        "kind": "string",
+        "value": "string"
+      },
+      "rhs": "string",
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "error.test.tsx",
+    "describes": [
+      "Error"
+    ],
+    "it": "should not throw if flex missing on span that has children"
+  }
+}

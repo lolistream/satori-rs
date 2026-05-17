@@ -1,0 +1,22 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toBe",
+      "lhs": {
+        "kind": "string",
+        "value": "undefined"
+      },
+      "rhs": "string",
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "handler-units.test.tsx",
+    "describes": [
+      "handler/variables.ts"
+    ],
+    "it": "resolveVariables handles var() that begins with non-word (returns invalid)"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "height": "100%",
+        "width": "100%",
+        "display": "flex",
+        "backgroundColor": "#e2e2e2"
+      },
+      "children": {
+        "type": "div",
+        "props": {
+          "style": {
+            "display": "flex",
+            "width": 50,
+            "height": 50,
+            "padding": 10,
+            "boxSizing": "content-box",
+            "backgroundColor": "purple"
+          },
+          "children": {
+            "type": "div",
+            "props": {
+              "style": {
+                "height": "100%",
+                "width": "100%",
+                "backgroundColor": "white"
+              }
+            },
+            "key": null
+          }
+        },
+        "key": null
+      }
+    },
+    "key": null
+  },
+  "options": {
+    "width": 100,
+    "height": 100,
+    "fonts": []
+  },
+  "width": 100,
+  "snapshot": "box-sizing-test-tsx-box-sizing-should-support-content-box-1-snap.png",
+  "source": {
+    "file": "box-sizing.test.tsx",
+    "describes": [
+      "box sizing"
+    ],
+    "it": "should support content-box",
+    "callIndex": 0
+  }
+}

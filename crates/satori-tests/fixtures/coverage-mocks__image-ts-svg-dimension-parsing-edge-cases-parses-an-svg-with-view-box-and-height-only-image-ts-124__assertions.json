@@ -1,0 +1,12 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [],
+  "source": {
+    "file": "coverage-mocks.test.tsx",
+    "describes": [
+      "image.ts: SVG dimension parsing edge cases"
+    ],
+    "it": "parses an SVG with viewBox and height only (image.ts:124)"
+  }
+}

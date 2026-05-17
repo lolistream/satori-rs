@@ -1,0 +1,140 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "height": "100%",
+        "width": "100%",
+        "display": "flex",
+        "flexDirection": "column",
+        "backgroundColor": "#fff",
+        "whiteSpace": "pre-wrap"
+      },
+      "children": [
+        {
+          "type": "div",
+          "props": {
+            "style": {
+              "display": "flex"
+            },
+            "children": [
+              "\t",
+              "one tab"
+            ]
+          },
+          "key": null
+        },
+        {
+          "type": "div",
+          "props": {
+            "style": {
+              "display": "flex",
+              "tabSize": 8
+            },
+            "children": [
+              "\t",
+              "one tab"
+            ]
+          },
+          "key": null
+        },
+        {
+          "type": "div",
+          "props": {
+            "style": {
+              "display": "flex"
+            },
+            "children": [
+              "1",
+              "\t",
+              "one tab"
+            ]
+          },
+          "key": null
+        },
+        {
+          "type": "div",
+          "props": {
+            "style": {
+              "display": "flex"
+            },
+            "children": [
+              "1111",
+              "\t",
+              "one tab"
+            ]
+          },
+          "key": null
+        },
+        {
+          "type": "div",
+          "props": {
+            "style": {
+              "display": "flex"
+            },
+            "children": [
+              "\t",
+              "\t",
+              "two tabs"
+            ]
+          },
+          "key": null
+        },
+        {
+          "type": "div",
+          "props": {
+            "style": {
+              "display": "flex"
+            },
+            "children": [
+              "1",
+              "\t",
+              "\t",
+              "two tabs"
+            ]
+          },
+          "key": null
+        },
+        {
+          "type": "div",
+          "props": {
+            "style": {
+              "display": "flex"
+            },
+            "children": [
+              "1",
+              "\t",
+              "\t",
+              "\t",
+              "three tabs"
+            ]
+          },
+          "key": null
+        }
+      ]
+    },
+    "key": null
+  },
+  "options": {
+    "width": 150,
+    "height": 150,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 150,
+  "snapshot": "tab-size-test-tsx-tab-size-tabs-render-correctly-with-default-tab-size-of-8-when-white-space-is-pre-wrap-1-snap.png",
+  "source": {
+    "file": "tab-size.test.tsx",
+    "describes": [
+      "tab-size"
+    ],
+    "it": "Tabs render correctly with default tab-size of 8 when white-space is 'pre-wrap'",
+    "callIndex": 0
+  }
+}

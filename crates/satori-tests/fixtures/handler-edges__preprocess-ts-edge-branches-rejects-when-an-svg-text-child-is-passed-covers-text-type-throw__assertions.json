@@ -1,0 +1,69 @@
+{
+  "kind": "assertions",
+  "calls": [
+    {
+      "element": {
+        "type": "div",
+        "props": {
+          "style": {
+            "display": "flex"
+          },
+          "children": {
+            "type": "svg",
+            "props": {
+              "viewBox": "0 0 100 100",
+              "width": "100",
+              "height": "100",
+              "xmlns": "http://www.w3.org/2000/svg",
+              "children": {
+                "type": "text",
+                "props": {
+                  "x": "10",
+                  "y": "30",
+                  "children": "hi"
+                },
+                "key": null
+              }
+            },
+            "key": null
+          }
+        },
+        "key": null
+      },
+      "options": {
+        "width": 100,
+        "height": 100,
+        "fonts": [
+          {
+            "name": "Roboto",
+            "weight": 400,
+            "style": "normal",
+            "assetFile": "Roboto-Regular.ttf"
+          }
+        ]
+      },
+      "error": null
+    }
+  ],
+  "assertions": [
+    {
+      "kind": "rejectsToThrow",
+      "lhs": {
+        "kind": "satoriPromise",
+        "callId": 0
+      },
+      "rhs": {
+        "__regex": "<text> nodes are not currently supported",
+        "flags": ""
+      },
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "handler-edges.test.tsx",
+    "describes": [
+      "preprocess.ts edge branches"
+    ],
+    "it": "rejects when an SVG <text> child is passed (covers text type throw)"
+  }
+}

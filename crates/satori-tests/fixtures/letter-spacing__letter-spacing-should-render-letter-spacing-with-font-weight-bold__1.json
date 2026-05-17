@@ -1,0 +1,36 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "fontSize": 20,
+        "letterSpacing": 3,
+        "fontWeight": "bold"
+      },
+      "children": "Bold Text"
+    },
+    "key": null
+  },
+  "options": {
+    "width": 100,
+    "height": 100,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 100,
+  "snapshot": "letter-spacing-test-tsx-letter-spacing-should-render-letter-spacing-with-font-weight-bold-1-snap.png",
+  "source": {
+    "file": "letter-spacing.test.tsx",
+    "describes": [
+      "Letter Spacing"
+    ],
+    "it": "should render letter-spacing with font-weight bold",
+    "callIndex": 0
+  }
+}

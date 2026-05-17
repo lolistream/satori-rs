@@ -1,0 +1,12 @@
+/target
+**/*.rs.bk
+Cargo.lock.bak
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Node deps for xtask helpers (rasterize.mjs, dump.mjs). Installed via
+# `cd xtask && npm install`; not source.
+xtask/node_modules/
+xtask/package-lock.json

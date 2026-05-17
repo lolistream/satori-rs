@@ -1,0 +1,24 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toEqual",
+      "lhs": {
+        "kind": "null"
+      },
+      "rhs": {
+        "xRelative": 0,
+        "yRelative": 0
+      },
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "transform-origin.test.tsx",
+    "describes": [
+      "parseTransformOrigin (unit)"
+    ],
+    "it": "handles two values: left then top (no swap)"
+  }
+}

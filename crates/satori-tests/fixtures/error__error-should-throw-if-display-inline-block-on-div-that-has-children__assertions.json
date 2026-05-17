@@ -1,0 +1,58 @@
+{
+  "kind": "assertions",
+  "calls": [
+    {
+      "element": {
+        "type": "div",
+        "props": {
+          "style": {
+            "display": "inline-block"
+          },
+          "children": [
+            "Test ",
+            {
+              "type": "span",
+              "props": {
+                "children": "satori"
+              },
+              "key": null
+            },
+            " with space"
+          ]
+        },
+        "key": null
+      },
+      "options": {
+        "width": 10,
+        "height": 10,
+        "fonts": [
+          {
+            "name": "Roboto",
+            "weight": 400,
+            "style": "normal",
+            "assetFile": "Roboto-Regular.ttf"
+          }
+        ]
+      },
+      "error": null
+    }
+  ],
+  "assertions": [
+    {
+      "kind": "rejectsToThrow",
+      "lhs": {
+        "kind": "satoriPromise",
+        "callId": 0
+      },
+      "rhs": "Invalid value for CSS property \"display\". Allowed values: \"flex\" | \"block\" | \"contents\" | \"none\" | \"-webkit-box\". Received: \"inline-block\".",
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "error.test.tsx",
+    "describes": [
+      "Error"
+    ],
+    "it": "should throw if display inline-block on div that has children"
+  }
+}

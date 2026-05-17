@@ -1,0 +1,53 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "display": "flex",
+        "flexWrap": "wrap",
+        "width": 100,
+        "height": 100,
+        "fontSize": 30,
+        "background": "#ebebeb",
+        "color": "#ffffff",
+        "WebkitTextStroke": "4px #000000"
+      },
+      "children": [
+        "Hello, ",
+        {
+          "type": "span",
+          "props": {
+            "style": {
+              "WebkitTextStrokeColor": "#ff0000"
+            },
+            "children": "world"
+          },
+          "key": null
+        }
+      ]
+    },
+    "key": null
+  },
+  "options": {
+    "width": 100,
+    "height": 100,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 100,
+  "snapshot": "webkit-text-stroke-test-tsx-webkit-text-stroke-should-work-nested-text-stroke-1-snap.png",
+  "source": {
+    "file": "webkit-text-stroke.test.tsx",
+    "describes": [
+      "webkit-text-stroke"
+    ],
+    "it": "should work nested text stroke",
+    "callIndex": 0
+  }
+}

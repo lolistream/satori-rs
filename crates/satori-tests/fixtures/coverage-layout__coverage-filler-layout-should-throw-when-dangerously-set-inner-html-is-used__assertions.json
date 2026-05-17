@@ -1,0 +1,53 @@
+{
+  "kind": "assertions",
+  "calls": [
+    {
+      "element": {
+        "type": "div",
+        "props": {
+          "style": {
+            "display": "flex"
+          },
+          "dangerouslySetInnerHTML": {
+            "__html": "<b>x</b>"
+          }
+        },
+        "key": null
+      },
+      "options": {
+        "width": 50,
+        "height": 50,
+        "fonts": [
+          {
+            "name": "Roboto",
+            "weight": 400,
+            "style": "normal",
+            "assetFile": "Roboto-Regular.ttf"
+          }
+        ]
+      },
+      "error": null
+    }
+  ],
+  "assertions": [
+    {
+      "kind": "rejectsToThrow",
+      "lhs": {
+        "kind": "satoriPromise",
+        "callId": 0
+      },
+      "rhs": {
+        "__regex": "dangerouslySetInnerHTML",
+        "flags": ""
+      },
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "coverage-layout.test.tsx",
+    "describes": [
+      "coverage filler: layout"
+    ],
+    "it": "should throw when dangerouslySetInnerHTML is used"
+  }
+}

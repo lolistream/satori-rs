@@ -1,0 +1,25 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toThrow",
+      "lhs": {
+        "kind": "other"
+      },
+      "rhs": {
+        "__regex": "Invalid transform",
+        "flags": ""
+      },
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "coverage-units-round2.test.tsx",
+    "describes": [
+      "Direct unit tests – round 2",
+      "transform.ts"
+    ],
+    "it": "throws \"Invalid transform\" for unsupported transform with string value (transform.ts:28)"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "kind": "assertions",
+  "calls": [
+    {
+      "element": {
+        "type": "div",
+        "props": {
+          "style": {
+            "display": "flex"
+          },
+          "children": {
+            "type": "img",
+            "props": {
+              "src": "data:image/png,rawdata"
+            },
+            "key": null
+          }
+        },
+        "key": null
+      },
+      "options": {
+        "width": 100,
+        "height": 100,
+        "fonts": [
+          {
+            "name": "Roboto",
+            "weight": 400,
+            "style": "normal",
+            "assetFile": "Roboto-Regular.ttf"
+          }
+        ]
+      },
+      "error": null
+    }
+  ],
+  "assertions": [
+    {
+      "kind": "rejectsToThrow",
+      "lhs": {
+        "kind": "satoriPromise",
+        "callId": 0
+      },
+      "rhs": {
+        "__regex": "Image size cannot be determined",
+        "flags": ""
+      },
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "handler-edges.test.tsx",
+    "describes": [
+      "compute.ts edge branches"
+    ],
+    "it": "throws when img size cannot be determined (covers compute.ts size error)"
+  }
+}

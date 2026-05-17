@@ -1,0 +1,20 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "rejectsToThrow",
+      "lhs": {
+        "kind": "null"
+      },
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "image-units.test.tsx",
+    "describes": [
+      "image.ts resolveImageData with ArrayBuffer (covers detectContentType branches)"
+    ],
+    "it": "hits the SVG signature branch in detectContentType"
+  }
+}

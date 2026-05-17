@@ -1,0 +1,30 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toEqual",
+      "lhs": {
+        "kind": "null"
+      },
+      "rhs": [
+        {
+          "offset": 0,
+          "color": "transparent"
+        },
+        {
+          "offset": 1,
+          "color": "transparent"
+        }
+      ],
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "coverage-gradients.test.tsx",
+    "describes": [
+      "Gradient coverage – utils.normalizeStops"
+    ],
+    "it": "unit: should fall back to a single transparent stop when colorStops is empty"
+  }
+}

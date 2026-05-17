@@ -1,0 +1,89 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "height": "100%",
+        "width": "100%",
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "center",
+        "justifyContent": "center",
+        "backgroundColor": "#fff",
+        "fontSize": 16,
+        "fontFamily": "Habbo"
+      },
+      "children": {
+        "type": "div",
+        "props": {
+          "style": {
+            "display": "flex",
+            "flexDirection": "column",
+            "alignItems": "center",
+            "width": "160px",
+            "padding": "16px",
+            "textAlign": "center"
+          },
+          "children": [
+            {
+              "type": "div",
+              "props": {
+                "style": {
+                  "lineHeight": "16px",
+                  "marginBottom": "8px"
+                },
+                "children": "Pixel Perfect Text Aligment Pixel Perfect Text Aligment Pixel Perfect Text Aligment Pixel Perfect Text Aligment Pixel Perfect Text Aligment"
+              },
+              "key": null
+            },
+            {
+              "type": "div",
+              "props": {
+                "style": {
+                  "lineHeight": "16px",
+                  "marginBottom": "8px"
+                },
+                "children": "Pixel Perfect Text Aligment Pixel Perfect Text Aligment Pixel Perfect Text Aligment Pixel Perfect Text Aligment Pixel Perfect Text Aligment"
+              },
+              "key": null
+            },
+            {
+              "type": "div",
+              "props": {
+                "style": {
+                  "lineHeight": "16px"
+                },
+                "children": "Test"
+              },
+              "key": null
+            }
+          ]
+        },
+        "key": null
+      }
+    },
+    "key": null
+  },
+  "options": {
+    "width": 200,
+    "height": 200,
+    "fonts": [
+      {
+        "name": "Habbo",
+        "weight": 400,
+        "style": "normal"
+      }
+    ],
+    "embedFont": true
+  },
+  "width": 200,
+  "snapshot": "pixel-font-test-tsx-pixel-font-alignment-should-align-pixel-and-hinted-fonts-with-pixel-boundaries-1-snap.png",
+  "source": {
+    "file": "pixel-font.test.tsx",
+    "describes": [
+      "Pixel Font Alignment"
+    ],
+    "it": "Should align pixel and hinted fonts with pixel boundaries",
+    "callIndex": 0
+  }
+}

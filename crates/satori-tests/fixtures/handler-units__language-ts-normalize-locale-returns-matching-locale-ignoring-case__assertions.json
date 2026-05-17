@@ -1,0 +1,22 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toBe",
+      "lhs": {
+        "kind": "string",
+        "value": "ZH-cn"
+      },
+      "rhs": "zh-CN",
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "handler-units.test.tsx",
+    "describes": [
+      "language.ts normalizeLocale"
+    ],
+    "it": "returns matching locale ignoring case"
+  }
+}

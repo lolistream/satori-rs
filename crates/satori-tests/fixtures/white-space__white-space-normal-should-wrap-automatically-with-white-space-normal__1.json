@@ -1,0 +1,35 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "whiteSpace": "normal"
+      },
+      "children": "hello, world"
+    },
+    "key": null
+  },
+  "options": {
+    "width": 20,
+    "height": 100,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 20,
+  "snapshot": "white-space-test-tsx-white-space-normal-should-wrap-automatically-with-white-space-normal-1-snap.png",
+  "source": {
+    "file": "white-space.test.tsx",
+    "describes": [
+      "white-space",
+      "normal"
+    ],
+    "it": "should wrap automatically with `white-space: normal`",
+    "callIndex": 0
+  }
+}

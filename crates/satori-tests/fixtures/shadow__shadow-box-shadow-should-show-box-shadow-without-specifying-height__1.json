@@ -1,0 +1,49 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "display": "flex",
+        "width": 100,
+        "padding": 10,
+        "background": "white"
+      },
+      "children": {
+        "type": "div",
+        "props": {
+          "style": {
+            "display": "flex",
+            "boxShadow": "10px 10px 10px green",
+            "width": "50px",
+            "height": "50px",
+            "background": "rgba(0,0,0,0.5)"
+          }
+        },
+        "key": null
+      }
+    },
+    "key": null
+  },
+  "options": {
+    "width": 100,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 100,
+  "snapshot": "shadow-test-tsx-shadow-box-shadow-should-show-box-shadow-without-specifying-height-1-snap.png",
+  "source": {
+    "file": "shadow.test.tsx",
+    "describes": [
+      "Shadow",
+      "box-shadow"
+    ],
+    "it": "should show box shadow without specifying height",
+    "callIndex": 0
+  }
+}

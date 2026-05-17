@@ -1,0 +1,56 @@
+{
+  "kind": "assertions",
+  "calls": [
+    {
+      "element": {
+        "type": "div",
+        "props": {
+          "style": {
+            "height": "100%",
+            "width": "100%",
+            "display": "flex",
+            "background": "white",
+            "fontSize": 24,
+            "color": "black",
+            "opacity": 0.5
+          },
+          "children": "Hi"
+        },
+        "key": null
+      },
+      "options": {
+        "width": 200,
+        "height": 80,
+        "fonts": [
+          {
+            "name": "Roboto",
+            "weight": 400,
+            "style": "normal",
+            "assetFile": "Roboto-Regular.ttf"
+          }
+        ],
+        "embedFont": false
+      },
+      "error": null
+    }
+  ],
+  "assertions": [
+    {
+      "kind": "toContain",
+      "lhs": {
+        "kind": "satoriSvg",
+        "callId": 0
+      },
+      "rhs": "opacity=\"0.5\"",
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "coverage-builders.test.tsx",
+    "describes": [
+      "coverage filler: builders",
+      "text (non-embedded font branches)"
+    ],
+    "it": "should render text with opacity !== 1 and embedFont:false"
+  }
+}

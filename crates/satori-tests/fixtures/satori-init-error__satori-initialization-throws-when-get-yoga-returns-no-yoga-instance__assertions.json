@@ -1,0 +1,24 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "rejectsToThrow",
+      "lhs": {
+        "kind": "null"
+      },
+      "rhs": {
+        "__regex": "Satori is not initialized",
+        "flags": ""
+      },
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "satori-init-error.test.tsx",
+    "describes": [
+      "satori initialization"
+    ],
+    "it": "throws when getYoga returns no Yoga instance"
+  }
+}

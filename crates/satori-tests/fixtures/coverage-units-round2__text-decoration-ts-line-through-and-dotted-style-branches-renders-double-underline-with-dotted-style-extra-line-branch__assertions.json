@@ -1,0 +1,21 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toContain",
+      "lhs": {
+        "kind": "null"
+      },
+      "rhs": "<line",
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "coverage-units-round2.test.tsx",
+    "describes": [
+      "text-decoration.ts: line-through and dotted style branches"
+    ],
+    "it": "renders double underline with dotted style (extra-line branch)"
+  }
+}

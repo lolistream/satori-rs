@@ -1,0 +1,53 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "height": "100%",
+        "width": "100%",
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "center",
+        "justifyContent": "center",
+        "backgroundColor": "#ee7621",
+        "fontSize": 32,
+        "fontWeight": 600
+      },
+      "children": {
+        "type": "div",
+        "props": {
+          "style": {
+            "height": 20,
+            "width": 20,
+            "clipPath": "circle(5px at 5px 5px)",
+            "background": "red"
+          }
+        },
+        "key": null
+      }
+    },
+    "key": null
+  },
+  "options": {
+    "width": 100,
+    "height": 100,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 100,
+  "snapshot": "clip-path-test-tsx-clip-path-should-respect-left-and-top-1-snap.png",
+  "source": {
+    "file": "clip-path.test.tsx",
+    "describes": [
+      "clipPath"
+    ],
+    "it": "should respect left and top",
+    "callIndex": 0
+  }
+}

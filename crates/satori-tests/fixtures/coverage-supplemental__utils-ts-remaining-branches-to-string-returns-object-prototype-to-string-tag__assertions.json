@@ -1,0 +1,31 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toBe",
+      "lhs": {
+        "kind": "string",
+        "value": "[object Object]"
+      },
+      "rhs": "[object Object]",
+      "negated": false
+    },
+    {
+      "kind": "toBe",
+      "lhs": {
+        "kind": "string",
+        "value": "[object Array]"
+      },
+      "rhs": "[object Array]",
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "coverage-supplemental.test.tsx",
+    "describes": [
+      "utils.ts remaining branches"
+    ],
+    "it": "toString returns Object.prototype.toString tag"
+  }
+}

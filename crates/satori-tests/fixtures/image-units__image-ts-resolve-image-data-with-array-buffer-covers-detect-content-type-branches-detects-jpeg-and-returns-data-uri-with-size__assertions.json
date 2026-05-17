@@ -1,0 +1,12 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [],
+  "source": {
+    "file": "image-units.test.tsx",
+    "describes": [
+      "image.ts resolveImageData with ArrayBuffer (covers detectContentType branches)"
+    ],
+    "it": "detects JPEG and returns data URI with size"
+  }
+}

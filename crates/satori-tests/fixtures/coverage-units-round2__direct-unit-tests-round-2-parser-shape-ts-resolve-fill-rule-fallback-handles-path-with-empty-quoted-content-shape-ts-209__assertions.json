@@ -1,0 +1,13 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [],
+  "source": {
+    "file": "coverage-units-round2.test.tsx",
+    "describes": [
+      "Direct unit tests – round 2",
+      "parser/shape.ts: resolveFillRule fallback"
+    ],
+    "it": "handles path() with empty quoted content (shape.ts:209)"
+  }
+}

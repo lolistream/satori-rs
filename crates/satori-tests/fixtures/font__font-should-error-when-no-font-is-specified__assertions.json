@@ -1,0 +1,28 @@
+{
+  "kind": "assertions",
+  "calls": [
+    {
+      "element": {
+        "type": "div",
+        "props": {
+          "children": "hello"
+        },
+        "key": null
+      },
+      "options": {
+        "width": 100,
+        "height": 100,
+        "fonts": []
+      },
+      "error": null
+    }
+  ],
+  "assertions": [],
+  "source": {
+    "file": "font.test.tsx",
+    "describes": [
+      "Font"
+    ],
+    "it": "should error when no font is specified"
+  }
+}

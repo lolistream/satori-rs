@@ -1,0 +1,57 @@
+{
+  "kind": "assertions",
+  "calls": [
+    {
+      "element": {
+        "type": "div",
+        "props": {
+          "style": {
+            "height": "100%",
+            "width": "100%",
+            "display": "flex",
+            "overflow": "hidden",
+            "background": "white",
+            "fontSize": 24,
+            "color": "black"
+          },
+          "children": "Hello"
+        },
+        "key": null
+      },
+      "options": {
+        "width": 200,
+        "height": 80,
+        "fonts": [
+          {
+            "name": "Roboto",
+            "weight": 400,
+            "style": "normal",
+            "assetFile": "Roboto-Regular.ttf"
+          }
+        ],
+        "debug": true,
+        "embedFont": false
+      },
+      "error": null
+    }
+  ],
+  "assertions": [
+    {
+      "kind": "toContain",
+      "lhs": {
+        "kind": "satoriSvg",
+        "callId": 0
+      },
+      "rhs": "#575eff",
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "coverage-builders.test.tsx",
+    "describes": [
+      "coverage filler: builders",
+      "text (debug rect)"
+    ],
+    "it": "should render a debug rect with clip-path when embedFont:false and parent has overflow:hidden"
+  }
+}

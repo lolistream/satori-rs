@@ -1,0 +1,44 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "border": "1px solid",
+        "width": "50%",
+        "height": "50%",
+        "display": "flex"
+      },
+      "children": {
+        "type": "img",
+        "props": {
+          "width": 30,
+          "src": "https://via.placeholder.com/200"
+        },
+        "key": null
+      }
+    },
+    "key": null
+  },
+  "options": {
+    "width": 100,
+    "height": 100,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 100,
+  "snapshot": "image-test-tsx-image-should-resolve-the-image-size-and-scale-automatically-1-snap.png",
+  "source": {
+    "file": "image.test.tsx",
+    "describes": [
+      "Image"
+    ],
+    "it": "should resolve the image size and scale automatically",
+    "callIndex": 0
+  }
+}

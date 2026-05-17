@@ -1,0 +1,36 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "whiteSpace": "pre-wrap"
+      },
+      "children": "hello, world"
+    },
+    "key": null
+  },
+  "options": {
+    "width": 20,
+    "height": 100,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ],
+    "embedFont": false
+  },
+  "width": 20,
+  "snapshot": "white-space-test-tsx-white-space-with-white-space-pre-wrap-should-automatically-wrap-with-white-space-pre-wrap-1-snap.png",
+  "source": {
+    "file": "white-space.test.tsx",
+    "describes": [
+      "white-space",
+      "with `white-space: pre-wrap`"
+    ],
+    "it": "should automatically wrap with `white-space: pre-wrap`",
+    "callIndex": 0
+  }
+}

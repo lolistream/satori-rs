@@ -1,0 +1,67 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "width": "100%",
+        "height": "100%",
+        "border": "10px solid rgba(0,0,0,0.5)",
+        "borderRadius": "100px 20%",
+        "display": "flex",
+        "overflow": "hidden",
+        "background": "green",
+        "padding": 5
+      },
+      "children": {
+        "type": "div",
+        "props": {
+          "style": {
+            "width": "100%",
+            "height": "100%",
+            "background": "red",
+            "borderRadius": "0% 60%",
+            "display": "flex",
+            "padding": 5,
+            "overflow": "hidden"
+          },
+          "children": {
+            "type": "div",
+            "props": {
+              "style": {
+                "width": "100%",
+                "height": "100%",
+                "background": "blue"
+              },
+              "children": "Satori"
+            },
+            "key": null
+          }
+        },
+        "key": null
+      }
+    },
+    "key": null
+  },
+  "options": {
+    "width": 100,
+    "height": 100,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 100,
+  "snapshot": "overflow-test-tsx-overflow-should-work-with-nested-border-border-radius-padding-1-snap.png",
+  "source": {
+    "file": "overflow.test.tsx",
+    "describes": [
+      "Overflow"
+    ],
+    "it": "should work with nested border, border-radius, padding",
+    "callIndex": 0
+  }
+}

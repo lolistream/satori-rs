@@ -1,0 +1,87 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toEqual",
+      "lhs": {
+        "kind": "array",
+        "length": 2
+      },
+      "rhs": [
+        "url(https:a.png)",
+        "linear-gradient(blue, red)"
+      ],
+      "negated": false
+    },
+    {
+      "kind": "toEqual",
+      "lhs": {
+        "kind": "array",
+        "length": 1
+      },
+      "rhs": [
+        "rgba(0,0,0,.7)"
+      ],
+      "negated": false
+    },
+    {
+      "kind": "toEqual",
+      "lhs": {
+        "kind": "array",
+        "length": 2
+      },
+      "rhs": [
+        "1px 1px 2px black",
+        "0 0 1em blue"
+      ],
+      "negated": false
+    },
+    {
+      "kind": "toEqual",
+      "lhs": {
+        "kind": "array",
+        "length": 3
+      },
+      "rhs": [
+        "2px 2px red",
+        "4px 4px #4bf542",
+        "6px 6px rgba(186, 147, 17, 30%)"
+      ],
+      "negated": false
+    },
+    {
+      "kind": "toEqual",
+      "lhs": {
+        "kind": "array",
+        "length": 3
+      },
+      "rhs": [
+        "drop-shadow(4px 4px 10px blue)",
+        "blur(4px)",
+        "saturate(150%)"
+      ],
+      "negated": false
+    },
+    {
+      "kind": "toEqual",
+      "lhs": {
+        "kind": "array",
+        "length": 3
+      },
+      "rhs": [
+        "drop-shadow(4px 4px 10px blue)",
+        "blur(4px)",
+        "saturate(150%)"
+      ],
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "units.test.tsx",
+    "describes": [
+      "Units"
+    ],
+    "it": "should support split multiple effect"
+  }
+}

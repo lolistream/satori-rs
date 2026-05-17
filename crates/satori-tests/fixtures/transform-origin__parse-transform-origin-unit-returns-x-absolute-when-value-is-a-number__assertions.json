@@ -1,0 +1,23 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toEqual",
+      "lhs": {
+        "kind": "null"
+      },
+      "rhs": {
+        "xAbsolute": 50
+      },
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "transform-origin.test.tsx",
+    "describes": [
+      "parseTransformOrigin (unit)"
+    ],
+    "it": "returns xAbsolute when value is a number"
+  }
+}

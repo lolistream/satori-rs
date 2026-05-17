@@ -1,0 +1,58 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "height": "100%",
+        "width": "100%",
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "center",
+        "justifyContent": "center",
+        "backgroundColor": "#fff",
+        "fontSize": 20,
+        "fontWeight": 600
+      },
+      "children": {
+        "type": "div",
+        "props": {
+          "style": {
+            "maxWidth": "190px",
+            "backgroundColor": "#91a8d0",
+            "textDecorationLine": "line-through",
+            "color": "white",
+            "textAlign": "center"
+          },
+          "children": "你好! It doesn’t 안녕! exist, it never has. I’m nostalgic for a place that never existed."
+        },
+        "key": null
+      }
+    },
+    "key": null
+  },
+  "options": {
+    "width": 200,
+    "height": 200,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ],
+    "loadAdditionalAsset": {
+      "__callable": true
+    }
+  },
+  "width": 200,
+  "snapshot": "text-decoration-test-tsx-text-decoration-should-work-correctly-when-text-decoration-line-line-through-and-text-align-right-1-snap.png",
+  "source": {
+    "file": "text-decoration.test.tsx",
+    "describes": [
+      "Text Decoration"
+    ],
+    "it": "Should work correctly when `text-decoration-line: line-through` and `text-align: right`",
+    "callIndex": 0
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [],
+  "source": {
+    "file": "font-units.test.tsx",
+    "describes": [
+      "FontLoader unit tests"
+    ],
+    "it": "compares multiple fonts under the same name to pick the best weight match"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toEqual",
+      "lhs": {
+        "kind": "array",
+        "length": 1
+      },
+      "rhs": [
+        "ta-IN"
+      ],
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "language.test.tsx",
+    "describes": [
+      "detectLanguageCode"
+    ],
+    "it": "should detect tamil"
+  }
+}

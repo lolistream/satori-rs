@@ -1,0 +1,81 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "display": "flex",
+        "height": "100%",
+        "width": "100%",
+        "alignItems": "center",
+        "justifyContent": "center",
+        "flexDirection": "column",
+        "backgroundColor": "white",
+        "fontSize": 60,
+        "fontWeight": 400
+      },
+      "children": {
+        "type": "div",
+        "props": {
+          "style": {
+            "display": "flex",
+            "flexDirection": "column",
+            "width": 450,
+            "overflow": "hidden",
+            "whiteSpace": "nowrap"
+          },
+          "children": [
+            {
+              "type": "div",
+              "props": {
+                "style": {
+                  "width": 450,
+                  "textOverflow": "ellipsis",
+                  "overflow": "hidden"
+                },
+                "children": "LuciNyan 1 2 345"
+              },
+              "key": null
+            },
+            {
+              "type": "div",
+              "props": {
+                "style": {
+                  "width": 450,
+                  "textOverflow": "ellipsis",
+                  "overflow": "hidden"
+                },
+                "children": "LuciNyan 1 2 345 6"
+              },
+              "key": null
+            }
+          ]
+        },
+        "key": null
+      }
+    },
+    "key": null
+  },
+  "options": {
+    "width": 450,
+    "height": 450,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ],
+    "embedFont": true
+  },
+  "width": 450,
+  "snapshot": "overflow-test-tsx-overflow-should-work-with-ellipsis-nowrap-1-snap.png",
+  "source": {
+    "file": "overflow.test.tsx",
+    "describes": [
+      "Overflow"
+    ],
+    "it": "should work with ellipsis, nowrap",
+    "callIndex": 0
+  }
+}

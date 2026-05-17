@@ -1,0 +1,29 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toBeUndefined",
+      "lhs": {
+        "kind": "string",
+        "value": "NaN%"
+      },
+      "negated": false
+    },
+    {
+      "kind": "toHaveBeenCalled",
+      "lhs": {
+        "kind": "other"
+      },
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "handler-units.test.tsx",
+    "describes": [
+      "utils.ts pure helpers",
+      "asPointAutoPercentageLength"
+    ],
+    "it": "returns undefined on invalid percentage and warns"
+  }
+}

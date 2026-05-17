@@ -1,0 +1,53 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "color": "red",
+        "display": "flex",
+        "flexDirection": "column",
+        "width": "100%",
+        "wordBreak": "normal"
+      },
+      "children": [
+        {
+          "type": "span",
+          "props": {
+            "children": "She weighs around blah 50 kg"
+          },
+          "key": null
+        },
+        {
+          "type": "span",
+          "props": {
+            "children": "She weighs around blah 50 kg"
+          },
+          "key": null
+        }
+      ]
+    },
+    "key": null
+  },
+  "options": {
+    "width": 200,
+    "height": 100,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 200,
+  "snapshot": "word-break-test-tsx-word-break-should-support-non-breaking-space-1-snap.png",
+  "source": {
+    "file": "word-break.test.tsx",
+    "describes": [
+      "word-break"
+    ],
+    "it": "should support non-breaking space",
+    "callIndex": 0
+  }
+}

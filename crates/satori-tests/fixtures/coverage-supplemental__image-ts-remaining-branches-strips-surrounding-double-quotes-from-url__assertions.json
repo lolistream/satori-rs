@@ -1,0 +1,12 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [],
+  "source": {
+    "file": "coverage-supplemental.test.tsx",
+    "describes": [
+      "image.ts remaining branches"
+    ],
+    "it": "strips surrounding double quotes from URL"
+  }
+}

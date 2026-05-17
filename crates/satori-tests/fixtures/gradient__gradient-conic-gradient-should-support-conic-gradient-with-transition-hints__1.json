@@ -1,0 +1,36 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "backgroundImage": "conic-gradient(from 0.25turn at 50% 30%, #f69d3c, 10deg, #3f87a6, 350deg, #ebf8e1)",
+        "height": "100%",
+        "width": "100%"
+      }
+    },
+    "key": null
+  },
+  "options": {
+    "width": 200,
+    "height": 200,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 200,
+  "snapshot": "gradient-test-tsx-gradient-conic-gradient-should-support-conic-gradient-with-transition-hints-1-snap.png",
+  "source": {
+    "file": "gradient.test.tsx",
+    "describes": [
+      "Gradient",
+      "conic-gradient"
+    ],
+    "it": "should support conic-gradient with transition hints",
+    "callIndex": 0
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "display": "flex",
+        "width": 100,
+        "height": 100,
+        "background": "red",
+        "opacity": 0
+      },
+      "children": {
+        "type": "div",
+        "props": {
+          "style": {
+            "fontSize": 20,
+            "color": "white"
+          },
+          "children": "Hidden Text"
+        },
+        "key": null
+      }
+    },
+    "key": null
+  },
+  "options": {
+    "width": 100,
+    "height": 100,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 100,
+  "snapshot": "opacity-test-tsx-opacity-should-handle-opacity-0-with-nested-content-1-snap.png",
+  "source": {
+    "file": "opacity.test.tsx",
+    "describes": [
+      "Opacity"
+    ],
+    "it": "should handle opacity 0 with nested content",
+    "callIndex": 0
+  }
+}

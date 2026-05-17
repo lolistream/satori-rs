@@ -1,0 +1,37 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "display": "flex",
+        "fontSize": 20,
+        "color": "black",
+        "textTransform": "lowercase"
+      },
+      "children": "HELLO WORLD"
+    },
+    "key": null
+  },
+  "options": {
+    "width": 300,
+    "height": 60,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 300,
+  "snapshot": "coverage-text-test-tsx-text-coverage-processor-should-lowercase-text-via-text-transform-1-snap.png",
+  "source": {
+    "file": "coverage-text.test.tsx",
+    "describes": [
+      "Text coverage – processor"
+    ],
+    "it": "should lowercase text via textTransform",
+    "callIndex": 0
+  }
+}

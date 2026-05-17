@@ -1,0 +1,31 @@
+{
+  "element": {
+    "type": "img",
+    "props": {
+      "src": "data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMTUiIGZpbGw9IiNlZTc2MjEiLz48L3N2Zz4="
+    },
+    "key": null
+  },
+  "options": {
+    "width": 100,
+    "height": 100,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 100,
+  "snapshot": "image-test-tsx-background-image-url-should-handle-charset-utf-8-with-in-base-64-1-snap.png",
+  "source": {
+    "file": "image.test.tsx",
+    "describes": [
+      "background-image: url()"
+    ],
+    "it": "should handle charset=utf-8 with in base64",
+    "callIndex": 0
+  }
+}

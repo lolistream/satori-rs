@@ -1,0 +1,12 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [],
+  "source": {
+    "file": "tailwind.test.tsx",
+    "describes": [
+      "tailwind handler unit"
+    ],
+    "it": "all default shadow presets are addressable"
+  }
+}

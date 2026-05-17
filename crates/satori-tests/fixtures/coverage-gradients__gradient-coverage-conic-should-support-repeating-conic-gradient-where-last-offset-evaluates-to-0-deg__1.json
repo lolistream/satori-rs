@@ -1,0 +1,35 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "backgroundImage": "repeating-conic-gradient(red 90deg, blue 0deg)",
+        "height": "100%",
+        "width": "100%"
+      }
+    },
+    "key": null
+  },
+  "options": {
+    "width": 100,
+    "height": 100,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 100,
+  "snapshot": "coverage-gradients-test-tsx-gradient-coverage-conic-should-support-repeating-conic-gradient-where-last-offset-evaluates-to-0-deg-1-snap.png",
+  "source": {
+    "file": "coverage-gradients.test.tsx",
+    "describes": [
+      "Gradient coverage – conic"
+    ],
+    "it": "should support repeating-conic-gradient where last offset evaluates to 0deg",
+    "callIndex": 0
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [],
+  "source": {
+    "file": "coverage-supplemental.test.tsx",
+    "describes": [
+      "image.ts remaining branches"
+    ],
+    "it": "warns and returns the data URI when format is not base64-encoded"
+  }
+}

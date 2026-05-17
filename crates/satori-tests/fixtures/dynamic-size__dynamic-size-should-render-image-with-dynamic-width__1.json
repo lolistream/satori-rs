@@ -1,0 +1,30 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "children": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+    },
+    "key": null
+  },
+  "options": {
+    "height": 25,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 300,
+  "snapshot": "dynamic-size-test-tsx-dynamic-size-should-render-image-with-dynamic-width-1-snap.png",
+  "source": {
+    "file": "dynamic-size.test.tsx",
+    "describes": [
+      "Dynamic size"
+    ],
+    "it": "should render image with dynamic width",
+    "callIndex": 0
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "height": "100%",
+        "width": "100%",
+        "display": "flex",
+        "alignItems": "center",
+        "justifyContent": "center"
+      },
+      "children": {
+        "type": "div",
+        "props": {
+          "style": {
+            "backgroundColor": "rgb(225, 168, 211)",
+            "height": "100%",
+            "width": "100%",
+            "backgroundImage": "radial-gradient(at 3% 42%, rgb(228, 105, 236) 0px, transparent 50%)"
+          }
+        },
+        "key": null
+      }
+    },
+    "key": null
+  },
+  "options": {
+    "width": 100,
+    "height": 100,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 100,
+  "snapshot": "gradient-test-tsx-gradient-radial-gradient-should-support-radial-gradient-with-unspecified-ending-shape-1-snap.png",
+  "source": {
+    "file": "gradient.test.tsx",
+    "describes": [
+      "Gradient",
+      "radial-gradient"
+    ],
+    "it": "should support radial-gradient with unspecified <ending-shape>",
+    "callIndex": 0
+  }
+}

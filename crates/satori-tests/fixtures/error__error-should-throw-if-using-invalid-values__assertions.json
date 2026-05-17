@@ -1,0 +1,48 @@
+{
+  "kind": "assertions",
+  "calls": [
+    {
+      "element": {
+        "type": "div",
+        "props": {
+          "style": {
+            "position": "fixed "
+          },
+          "children": "Test"
+        },
+        "key": null
+      },
+      "options": {
+        "width": 10,
+        "height": 10,
+        "fonts": [
+          {
+            "name": "Roboto",
+            "weight": 400,
+            "style": "normal",
+            "assetFile": "Roboto-Regular.ttf"
+          }
+        ]
+      },
+      "error": null
+    }
+  ],
+  "assertions": [
+    {
+      "kind": "rejectsToThrow",
+      "lhs": {
+        "kind": "satoriPromise",
+        "callId": 0
+      },
+      "rhs": "Invalid value for CSS property \"position\". Allowed values: \"absolute\" | \"relative\" | \"static\". Received: \"fixed\".",
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "error.test.tsx",
+    "describes": [
+      "Error"
+    ],
+    "it": "should throw if using invalid values"
+  }
+}

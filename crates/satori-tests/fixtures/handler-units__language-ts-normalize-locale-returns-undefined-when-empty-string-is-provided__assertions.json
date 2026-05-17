@@ -1,0 +1,21 @@
+{
+  "kind": "assertions",
+  "calls": [],
+  "assertions": [
+    {
+      "kind": "toBeUndefined",
+      "lhs": {
+        "kind": "string",
+        "value": ""
+      },
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "handler-units.test.tsx",
+    "describes": [
+      "language.ts normalizeLocale"
+    ],
+    "it": "returns undefined when empty string is provided"
+  }
+}

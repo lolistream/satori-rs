@@ -1,0 +1,37 @@
+{
+  "element": {
+    "type": "div",
+    "props": {
+      "style": {
+        "width": 90,
+        "fontSize": 16,
+        "letterSpacing": 2,
+        "lineHeight": 1.5
+      },
+      "children": "This is a multiline text with letter spacing"
+    },
+    "key": null
+  },
+  "options": {
+    "width": 100,
+    "height": 100,
+    "fonts": [
+      {
+        "name": "Roboto",
+        "weight": 400,
+        "style": "normal",
+        "assetFile": "Roboto-Regular.ttf"
+      }
+    ]
+  },
+  "width": 100,
+  "snapshot": "letter-spacing-test-tsx-letter-spacing-should-render-letter-spacing-with-multiple-lines-1-snap.png",
+  "source": {
+    "file": "letter-spacing.test.tsx",
+    "describes": [
+      "Letter Spacing"
+    ],
+    "it": "should render letter-spacing with multiple lines",
+    "callIndex": 0
+  }
+}

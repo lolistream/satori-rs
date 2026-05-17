@@ -1,0 +1,51 @@
+{
+  "kind": "assertions",
+  "calls": [
+    {
+      "element": {
+        "type": "div",
+        "props": {
+          "style": {
+            "display": "flex",
+            "fontSize": 20
+          },
+          "children": "桜"
+        },
+        "key": null
+      },
+      "options": {
+        "width": 100,
+        "height": 100,
+        "fonts": [
+          {
+            "name": "Roboto",
+            "weight": 400,
+            "style": "normal"
+          }
+        ],
+        "loadAdditionalAsset": {
+          "__callable": true
+        }
+      },
+      "error": null
+    }
+  ],
+  "assertions": [
+    {
+      "kind": "toBe",
+      "lhs": {
+        "kind": "string",
+        "value": "string"
+      },
+      "rhs": "string",
+      "negated": false
+    }
+  ],
+  "source": {
+    "file": "satori-load-additional.test.tsx",
+    "describes": [
+      "satori.loadAdditionalAsset variants"
+    ],
+    "it": "accepts a null/undefined asset (covers the falsy branch)"
+  }
+}
