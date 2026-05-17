@@ -49,19 +49,27 @@ pub(crate) fn js_float_to_string(v: f64, dp: u32) -> String {
 /// `-`, which is why `(-0.04).toFixed(1) === "-0.0"` even though `0`
 /// itself is unsigned.
 ///
-/// Rust's `{:.dp}` uses round-half-to-even (banker's rounding) which
-/// disagrees with JS only in the EXACT-tie case (e.g. `0.25` → JS
-/// "0.3", Rust "0.2"). We use Rust's exact rounding to get the
-/// correct "round to nearest decimal" answer for the common case,
-/// then specifically bump the result up by 1 ULP when:
-///   - the original `v * 10^dp` is exactly a half-integer (IEEE `*.5`)
-///   - and Rust's banker's rounding picked the lower (even) neighbor
+/// Implementation operates in the integer domain rather than via
+/// `format!("{:.50}")` (which falls into the slow bignum `dragon`
+/// formatter and dominates render time on `embedFont:true`):
 ///
-/// For inputs in the format `v = k / 2^n + integer` (which covers
-/// every path coordinate we emit — glyph-units divided by an integer
-/// `unitsPerEm`, offset by an integer baseline), the IEEE
-/// multiplication by 10^dp is exact, so the half-integer check is
-/// reliable and the result is byte-identical to JS's `toFixed`.
+/// 1. Compute `p = |v| * 10^dp` in IEEE.
+/// 2. Round to the nearest integer with `JS V8 toFixed` semantics
+///    (ties-to-larger). For non-tie inputs `(p.floor() if frac < 0.5
+///    else p.floor() + 1)` is byte-identical to V8.
+/// 3. At the IEEE tie boundary (`frac == 0.5`), the f64 product may
+///    have crossed `int.5` due to rounding while the true
+///    mathematical product is on the other side; resolve this with a
+///    single FMA — `abs.mul_add(scale, -p)` gives the exact rounding
+///    error, whose sign tells us whether to round up or down. JS
+///    looks at the EXACT mathematical value, so this matches V8
+///    byte-for-byte. (Without this correction inputs like `v = 0.15`
+///    — f64 ≈ 0.14999… — would round UP to `"0.2"` instead of the
+///    correct `"0.1"`.)
+///
+/// The fast path requires `|v * 10^dp| < 2^53`; every path coordinate
+/// we emit (glyph-units divided by `unitsPerEm`, scaled by
+/// `fontSize ≤ ~10^3` and emitted with `dp=1`) fits comfortably.
 pub(crate) fn js_to_fixed(v: f64, dp: u32) -> String {
     if !v.is_finite() {
         return format!("{v}");
@@ -69,95 +77,66 @@ pub(crate) fn js_to_fixed(v: f64, dp: u32) -> String {
     let neg = v < 0.0;
     let abs = v.abs();
 
-    // JS `Number.prototype.toFixed(dp)` rounds the EXACT mathematical
-    // value of the f64 to the nearest decimal candidate with `dp`
-    // fractional digits, breaking true ties by picking the larger
-    // candidate. The f64 representation of e.g. `20.95` is actually
-    // `20.94999999...`, so JS rounds it DOWN to `"20.9"` despite the
-    // decimal literal looking like a tie. Rust's `format!("{:.dp}")`
-    // banker-rounds, which agrees with JS on the not-tie case but
-    // disagrees at exact f64 ties (e.g. `0.25` → Rust "0.2", JS
-    // "0.3").
-    //
-    // To reproduce JS behavior exactly, format `abs` to enough decimal
-    // places to expose the exact f64 value (50 digits is more than
-    // sufficient; an f64 has at most ~17 significant digits), then
-    // apply round-half-up at position `dp` based on the EXACT digit
-    // string.
-    let high = format!("{abs:.50}");
-    let bytes = high.as_bytes();
-    let dot = bytes.iter().position(|&b| b == b'.').unwrap_or(bytes.len());
-
-    // Truncate / pad the fractional part to `dp` digits, then decide
-    // whether to round up by inspecting the next digit and the tail.
-    let int_part = &bytes[..dot];
-    let frac_part = if dot + 1 < bytes.len() { &bytes[dot + 1..] } else { &[][..] };
-
-    // Build the "decimal integer" representation of `abs * 10^dp`
-    // truncated. Then add 1 if round-up.
-    let mut digits: Vec<u8> = Vec::with_capacity(int_part.len() + dp as usize);
-    digits.extend_from_slice(int_part);
-    for i in 0..dp as usize {
-        digits.push(*frac_part.get(i).unwrap_or(&b'0'));
-    }
-
-    let next_digit = frac_part.get(dp as usize).copied().unwrap_or(b'0');
-    let round_up = match next_digit {
-        b'0'..=b'4' => false,
-        b'6'..=b'9' => true,
-        // next digit is '5' or beyond; we have a true tie iff every
-        // subsequent digit is '0'.
-        b'5' => {
-            // Round up if any subsequent digit is non-zero (more than
-            // half) OR if all are zero (exact tie → JS picks larger).
-            // Either way: round up.
-            let _tail = &frac_part[(dp as usize + 1).min(frac_part.len())..];
-            // `_tail` only matters if we wanted to handle a hypothetical
-            // round-half-to-even or rejected-tie variant; JS picks the
-            // larger candidate in both sub-cases, so always round up.
-            true
-        }
-        _ => false,
-    };
-
-    if round_up {
-        // In-place increment with carry.
-        let mut i = digits.len();
-        let mut carry = 1u8;
-        while i > 0 && carry > 0 {
-            i -= 1;
-            let d = digits[i] + carry;
-            if d > b'9' {
-                digits[i] = b'0';
-                carry = 1;
-            } else {
-                digits[i] = d;
-                carry = 0;
-            }
-        }
-        if carry > 0 {
-            digits.insert(0, b'1');
+    // 10^dp; exact f64 for `dp` up to 22.
+    let scale = 10f64.powi(dp as i32);
+    debug_assert!(
+        abs * scale < (1u64 << 53) as f64,
+        "js_to_fixed: |v * 10^dp| must fit in 2^53 for exact IEEE mul"
+    );
+    let p = abs * scale;
+    let int_part = p.floor();
+    let mut rounded = int_part as u64;
+    let frac = p - int_part;
+    if frac > 0.5 {
+        rounded += 1;
+    } else if frac == 0.5 {
+        // IEEE put us exactly on the tie. The true mathematical
+        // product `abs * scale` is `p + err` where err is the
+        // round-once error of the multiplication. JS V8 picks the
+        // larger candidate iff true >= int+0.5 (i.e. err >= 0).
+        let err = abs.mul_add(scale, -p);
+        if err >= 0.0 {
+            rounded += 1;
         }
     }
 
-    // Strip leading zeros from the integer part (keep at least one).
-    let int_len = digits.len() - dp as usize;
-    let int_str = std::str::from_utf8(&digits[..int_len]).unwrap_or("0");
-    let int_trimmed = int_str.trim_start_matches('0');
-    let int_final = if int_trimmed.is_empty() { "0" } else { int_trimmed };
-    let frac_str = std::str::from_utf8(&digits[int_len..]).unwrap_or("");
+    // Emit `rounded`'s decimal digits into a stack buffer (max u64 =
+    // 20 digits). Walk the buffer back-to-front so we can copy a
+    // contiguous tail without reversing.
+    let mut digits = [0u8; 20];
+    let mut i = digits.len();
+    let mut n = rounded;
+    loop {
+        i -= 1;
+        digits[i] = b'0' + (n % 10) as u8;
+        n /= 10;
+        if n == 0 {
+            break;
+        }
+    }
+    let digits = &digits[i..];
+    let dp_us = dp as usize;
 
-    let fmt = if dp == 0 {
-        int_final.to_string()
-    } else {
-        format!("{int_final}.{frac_str}")
-    };
-
+    let mut out = String::with_capacity(digits.len() + dp_us + 3);
     if neg {
-        format!("-{fmt}")
-    } else {
-        fmt
+        out.push('-');
     }
+    if dp_us == 0 {
+        out.push_str(std::str::from_utf8(digits).expect("ascii digits"));
+    } else if digits.len() <= dp_us {
+        // Magnitude < 1.0: emit "0." + leading zeros + digits.
+        out.push_str("0.");
+        for _ in 0..(dp_us - digits.len()) {
+            out.push('0');
+        }
+        out.push_str(std::str::from_utf8(digits).expect("ascii digits"));
+    } else {
+        let split = digits.len() - dp_us;
+        out.push_str(std::str::from_utf8(&digits[..split]).expect("ascii digits"));
+        out.push('.');
+        out.push_str(std::str::from_utf8(&digits[split..]).expect("ascii digits"));
+    }
+    out
 }
 
 
