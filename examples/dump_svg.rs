@@ -11,7 +11,7 @@ fn main() {
     let mut fx = load_fixture(&arg);
     mock_image_urls_for_test(&mut fx.element);
     let opts = fx.to_satori_options();
-    let svg = satori::satori_from_value(fx.element.clone(), opts).unwrap();
+    let svg = satori_rs::satori_from_value(fx.element.clone(), opts).unwrap();
     println!("SVG:\n{}", svg);
     let png = to_image(&svg, fx.width);
     eprintln!("PNG: {} bytes (snapshot: {})", png.len(), fx.snapshot);

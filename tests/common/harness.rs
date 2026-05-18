@@ -25,13 +25,13 @@ pub fn snapshot_path(name: &str) -> PathBuf {
 }
 
 /// Load the default Roboto-Regular font shipped under `assets/`.
-pub fn init_fonts() -> Vec<satori::font::FontDescriptor> {
+pub fn init_fonts() -> Vec<satori_rs::font::FontDescriptor> {
     let data = std::fs::read(asset("Roboto-Regular.ttf")).expect("Roboto-Regular.ttf");
-    vec![satori::font::FontDescriptor {
+    vec![satori_rs::font::FontDescriptor {
         name: "Roboto".to_string(),
         data,
         weight: Some(400),
-        style: Some(satori::font::FontStyle::Normal),
+        style: Some(satori_rs::font::FontStyle::Normal),
         lang: None,
     }]
 }
@@ -107,7 +107,7 @@ pub struct Fixture {
 /// `loadAdditionalAsset` synchronously and serialise the returned
 /// descriptors into the fixture instead of relying on the bulk
 /// preload here.
-fn preload_callback_approximation_fonts(fonts: &mut Vec<satori::font::FontDescriptor>) {
+fn preload_callback_approximation_fonts(fonts: &mut Vec<satori_rs::font::FontDescriptor>) {
     let dir = data_root().join("assets");
     let Ok(entries) = std::fs::read_dir(&dir) else { return };
     for entry in entries.flatten() {
@@ -134,19 +134,19 @@ fn preload_callback_approximation_fonts(fonts: &mut Vec<satori::font::FontDescri
                 _ => String::new(),
             })
             .unwrap_or_default();
-        fonts.push(satori::font::FontDescriptor {
+        fonts.push(satori_rs::font::FontDescriptor {
             name: format!("satori_{lang}_fallback_{name}"),
             data,
             weight: Some(400),
-            style: Some(satori::font::FontStyle::Normal),
+            style: Some(satori_rs::font::FontStyle::Normal),
             lang: if lang.is_empty() { None } else { Some(lang) },
         });
     }
 }
 
 impl Fixture {
-    pub fn to_satori_options(&self) -> satori::SatoriOptions {
-        let fonts: Vec<satori::font::FontDescriptor> = if self.options.fonts.is_empty() {
+    pub fn to_satori_options(&self) -> satori_rs::SatoriOptions {
+        let fonts: Vec<satori_rs::font::FontDescriptor> = if self.options.fonts.is_empty() {
             init_fonts()
         } else {
             self.options.fonts.iter().filter_map(|f| {
@@ -165,13 +165,13 @@ impl Fixture {
                     candidates.into_iter().find(|c| asset(c).exists())
                 })?;
                 let data = std::fs::read(asset(&af)).ok()?;
-                Some(satori::font::FontDescriptor {
+                Some(satori_rs::font::FontDescriptor {
                     name: f.name.clone().unwrap_or_else(|| "Roboto".to_string()),
                     data,
                     weight: f.weight.as_ref().and_then(|v| v.as_u64()).map(|n| n as u16).or(Some(400)),
                     style: match f.style.as_deref() {
-                        Some("italic") => Some(satori::font::FontStyle::Italic),
-                        _ => Some(satori::font::FontStyle::Normal),
+                        Some("italic") => Some(satori_rs::font::FontStyle::Italic),
+                        _ => Some(satori_rs::font::FontStyle::Normal),
                     },
                     lang: f.lang.clone(),
                 })
@@ -181,7 +181,7 @@ impl Fixture {
         if self.options.load_additional_asset.is_some() {
             preload_callback_approximation_fonts(&mut fonts);
         }
-        satori::SatoriOptions {
+        satori_rs::SatoriOptions {
             width: self.options.width,
             height: self.options.height,
             fonts,
@@ -209,7 +209,7 @@ pub fn run_fixture(name: &str) {
     let mut fx = load_fixture(name);
     mock_image_urls(&mut fx.element);
     let opts = fx.to_satori_options();
-    let svg = satori::satori_from_value(fx.element.clone(), opts).unwrap_or_else(|e| {
+    let svg = satori_rs::satori_from_value(fx.element.clone(), opts).unwrap_or_else(|e| {
         panic!("satori() failed on fixture {name}: {e}")
     });
     let png = to_image(&svg, fx.width);
@@ -264,14 +264,14 @@ pub struct Assertion {
 }
 
 impl AssertionsCall {
-    fn to_satori_options(&self) -> satori::SatoriOptions {
+    fn to_satori_options(&self) -> satori_rs::SatoriOptions {
         let fonts = if self.options.fonts.is_empty() {
             init_fonts()
         } else {
             self.options.fonts.iter().filter_map(|f| {
                 let af = f.asset_file.as_deref().unwrap_or("Roboto-Regular.ttf");
                 let data = std::fs::read(asset(af)).ok()?;
-                Some(satori::font::FontDescriptor {
+                Some(satori_rs::font::FontDescriptor {
                     name: f.name.clone().unwrap_or_else(|| "Roboto".to_string()),
                     data,
                     weight: f
@@ -281,15 +281,15 @@ impl AssertionsCall {
                         .map(|n| n as u16)
                         .or(Some(400)),
                     style: match f.style.as_deref() {
-                        Some("italic") => Some(satori::font::FontStyle::Italic),
-                        _ => Some(satori::font::FontStyle::Normal),
+                        Some("italic") => Some(satori_rs::font::FontStyle::Italic),
+                        _ => Some(satori_rs::font::FontStyle::Normal),
                     },
                     lang: f.lang.clone(),
                 })
             }).collect::<Vec<_>>()
         };
         let fonts = if fonts.is_empty() { init_fonts() } else { fonts };
-        satori::SatoriOptions {
+        satori_rs::SatoriOptions {
             width: self.options.width,
             height: self.options.height,
             fonts,
@@ -323,7 +323,7 @@ fn run_call(call: &AssertionsCall) -> CallResult {
     let mut el = call.element.clone();
     mock_image_urls(&mut el);
     let opts = call.to_satori_options();
-    match satori::satori_from_value(el, opts) {
+    match satori_rs::satori_from_value(el, opts) {
         Ok(s) => CallResult::Ok(s),
         Err(e) => CallResult::Err(e.to_string()),
     }

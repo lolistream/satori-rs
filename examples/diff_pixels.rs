@@ -16,7 +16,7 @@ fn main() {
     let snapshot = fx.snapshot.clone();
     let width = fx.width;
     let opts = fx.to_satori_options();
-    let svg = satori::satori_from_value(fx.element.clone(), opts).unwrap();
+    let svg = satori_rs::satori_from_value(fx.element.clone(), opts).unwrap();
     let actual_png = to_image(&svg, width);
 
     let snapshot_path = data_root().join("snapshots").join(&snapshot);
