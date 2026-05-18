@@ -1934,22 +1934,68 @@ fn apply_mask_image(s: &mut ComputedStyle, v: &serde_json::Value) {
     }
 }
 
+/// From a `background` shorthand layer, isolate the `<color>` sub-token.
+/// Splits on top-level whitespace (respecting nested parens so `rgba(0, 0,
+/// 0, 0.5)` stays a single token), returns the first token that
+/// `parse_color` accepts. Returns `None` when no token is a recognised
+/// color, in which case the caller falls back to verbatim passthrough.
+fn extract_color_sub_token(layer: &str) -> Option<String> {
+    let bytes = layer.as_bytes();
+    let mut depth = 0i32;
+    let mut start = 0usize;
+    let mut tokens: Vec<&str> = Vec::new();
+    for (i, &b) in bytes.iter().enumerate() {
+        match b {
+            b'(' => depth += 1,
+            b')' => depth -= 1,
+            b' ' | b'\t' | b'\n' | b'\r' if depth == 0 => {
+                if i > start {
+                    tokens.push(&layer[start..i]);
+                }
+                start = i + 1;
+            }
+            _ => {}
+        }
+    }
+    if start < bytes.len() {
+        tokens.push(&layer[start..]);
+    }
+    tokens
+        .into_iter()
+        .find(|t| super::color::parse_color(t.trim()).is_some())
+        .map(|t| t.trim().to_string())
+}
+
 fn apply_background_shorthand(s: &mut ComputedStyle, v: &serde_json::Value) {
     let Some(raw) = v.as_str() else { return };
     let layers_raw = split_top_level_commas(raw);
     let mut images: Vec<BackgroundImage> = Vec::new();
     let mut color_token: Option<String> = None;
     for layer in layers_raw {
+        // Rewrite `-webkit-(repeating-)?(linear|radial)-gradient(...)`
+        // into the standards-track form before classifying. Without
+        // this the prefixed gradient looks like an unknown token and
+        // gets silently routed into `background-color`, ending up in
+        // a `fill="-webkit-linear-gradient(...)"` attribute that no
+        // SVG renderer understands. Mirrors what
+        // `apply_background_image` does for the long-form property.
+        let layer = super::gradient::normalize_webkit_gradient(&layer);
         let trimmed = layer.trim();
         if is_gradient_layer(trimmed) || trimmed.starts_with("url(") {
             if let Some(img) = parse_one_background_layer(trimmed) {
                 images.push(img);
             }
         } else if !trimmed.is_empty() {
-            // Last non-gradient token becomes the background color — preserve
-            // the original CSS string verbatim (matches JS satori: a parsed
-            // color is stored as the raw token, not re-emitted as hex).
-            color_token = Some(trimmed.to_string());
+            // Non-gradient layer = background color (+ optional CSS
+            // background-shorthand position/size/origin/clip/repeat
+            // tokens that we don't render). Pull out just the color
+            // sub-token; otherwise inputs like `background: #0fa 100%`
+            // would emit `fill="#0fa 100%"` — an invalid SVG fill that
+            // most renderers fall back to black on. Mirrors JS
+            // satori's behaviour (parser/background.ts splits on
+            // whitespace + commas inside parens and picks the color).
+            let color = extract_color_sub_token(trimmed).unwrap_or_else(|| trimmed.to_string());
+            color_token = Some(color);
         }
     }
     if !images.is_empty() {

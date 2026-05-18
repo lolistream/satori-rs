@@ -385,9 +385,16 @@ fn radial_value_from_token(t: &str) -> RadialPropertyValue {
     }
 }
 
-/// Parse `<color> [<length>]` stops. Color tokens may themselves contain
-/// commas inside `rgb(...)`/`rgba(...)`/`hsl(...)` — `split_top_level`
-/// already respected the parens, so each entry here is a single stop.
+/// Parse `<color> [<length> [<length>]]` stops. Color tokens may
+/// themselves contain commas inside `rgb(...)`/`rgba(...)`/`hsl(...)` —
+/// `split_top_level` already respected the parens, so each entry here
+/// is a single stop.
+///
+/// CSS Color Module Level 4 allows a "double-position" form:
+/// `red 25% 50%` is shorthand for `red 25%, red 50%` (a solid color
+/// band). When we see two trailing offset tokens we emit two stops
+/// with the same color — matches what `css-gradient-parser` does
+/// effectively in JS satori for these inputs.
 fn parse_stops(parts: &[String]) -> Vec<ColorStop> {
     let mut stops = Vec::with_capacity(parts.len());
     for raw in parts {
@@ -395,40 +402,85 @@ fn parse_stops(parts: &[String]) -> Vec<ColorStop> {
         if trimmed.is_empty() {
             continue;
         }
-        // Find the split point between color and optional offset. The
-        // color may contain spaces inside `rgb(...)` / `hsl(...)`, so
-        // walk from the right and look for the first top-level space
-        // outside any parens, then check whether the trailing token is
-        // a length/percentage.
-        let bytes = trimmed.as_bytes();
-        let mut depth = 0i32;
-        let mut last_space: Option<usize> = None;
-        for (i, ch) in trimmed.char_indices() {
-            match ch {
-                '(' => depth += 1,
-                ')' => depth -= 1,
-                ' ' if depth == 0 => last_space = Some(i),
-                _ => {}
+        // Split into whitespace-separated tokens, respecting nested
+        // parens so `rgba(0, 0, 0, 0.5)` stays a single token.
+        let tokens = split_top_level_whitespace(trimmed);
+        if tokens.is_empty() {
+            continue;
+        }
+        // Peel valid offset tokens from the END until we hit something
+        // that's not a length/percentage — that's the color prefix.
+        let mut tail_offsets: Vec<StopOffset> = Vec::new();
+        let mut color_end = tokens.len();
+        while color_end > 0 {
+            if let Some(off) = parse_stop_offset(tokens[color_end - 1]) {
+                tail_offsets.push(off);
+                color_end -= 1;
+            } else {
+                break;
             }
         }
-        let (color_str, offset) = if let Some(sp) = last_space {
-            let candidate = trimmed[sp + 1..].trim();
-            if let Some(off) = parse_stop_offset(candidate) {
-                (trimmed[..sp].trim().to_string(), Some(off))
-            } else {
-                (trimmed.to_string(), None)
+        tail_offsets.reverse();
+        let color_str: String = tokens[..color_end].join(" ");
+        if color_str.is_empty() {
+            // All tokens parsed as offsets — degenerate, skip.
+            continue;
+        }
+        match tail_offsets.len() {
+            0 => stops.push(ColorStop {
+                color: color_str,
+                offset: None,
+                hint: None,
+            }),
+            1 => stops.push(ColorStop {
+                color: color_str,
+                offset: Some(tail_offsets.into_iter().next().unwrap()),
+                hint: None,
+            }),
+            _ => {
+                // Double-position (or more) — keep only first and last,
+                // emit two stops with the same color. Mirrors CSS L4.
+                let first = tail_offsets.first().cloned().unwrap();
+                let last = tail_offsets.last().cloned().unwrap();
+                stops.push(ColorStop {
+                    color: color_str.clone(),
+                    offset: Some(first),
+                    hint: None,
+                });
+                stops.push(ColorStop {
+                    color: color_str,
+                    offset: Some(last),
+                    hint: None,
+                });
             }
-        } else {
-            (trimmed.to_string(), None)
-        };
-        let _ = bytes;
-        stops.push(ColorStop {
-            color: color_str,
-            offset,
-            hint: None,
-        });
+        }
     }
     stops
+}
+
+/// Split a stop entry on whitespace, respecting nested parens.
+fn split_top_level_whitespace(s: &str) -> Vec<&str> {
+    let bytes = s.as_bytes();
+    let mut depth = 0i32;
+    let mut start = 0usize;
+    let mut out: Vec<&str> = Vec::new();
+    for (i, &b) in bytes.iter().enumerate() {
+        match b {
+            b'(' => depth += 1,
+            b')' => depth -= 1,
+            b' ' | b'\t' | b'\n' | b'\r' if depth == 0 => {
+                if i > start {
+                    out.push(&s[start..i]);
+                }
+                start = i + 1;
+            }
+            _ => {}
+        }
+    }
+    if start < bytes.len() {
+        out.push(&s[start..]);
+    }
+    out
 }
 
 fn parse_stop_offset(s: &str) -> Option<StopOffset> {
